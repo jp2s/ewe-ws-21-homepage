@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2021 WS - Einführung in Web Engineering - Homepage</title>
+    <style>
+        /*---------- flex ----------*/
+
+        .container {
+            display: flex;
+            flex-wrap: wrap
+        }
+        /*---------- typography ----------*/
+        @font-face {
+            font-family: "appleGaramondBoldItalic";
+            src: url("/fonts/apple_garamond/AppleGaramond-BoldItalic.ttf");
+        }
+        @font-face {
+            font-family: "appleGaramond";
+            src: url("/fonts/apple_garamond/AppleGaramond.ttf");
+        }
+
+        .helv {
+            font-family: "Helvetica Neue", serif;
+        }
+        .gara {
+            font-family: appleGaramond;
+        }
+        .garaBoldItalic {
+            font-family: appleGaramondBoldItalic;
+        }
+
+        .boldText {
+            font-weight: bold;
+        }
+        /*---------- header ----------*/
+        #header {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            row-gap: 20px;
+            margin-bottom: 50px;
+        }
+        #headerTitle {
+            font-size: 17px;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+        #headerDivider {
+            width: 30%;
+            border: 4px solid black;
+        }
+
+        #navBar {
+            width: 80%;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .navBarItem {
+            font-size: 70px;
+        }
+        .navBarItem:hover {
+            color: hotpink;
+            transition-duration: 0.3s;
+        }
+        /*---------- other ----------*/
+        body {
+            margin: 3%;
+        }
+    </style>
+</head>
+<body>
+<div id="header" class="container">
+    <div id="headerTitle" class="container">
+        <div class="helv boldText">2021 WS - Einführung in Web Engineering</div>
+        <div class="helv">Homepage</div>
+    </div>
+    <div id="navBar" class="container">
+        <div class="helv boldText navBarItem">one</div>
+        <div class="helv boldText navBarItem">two</div>
+        <div class="helv boldText navBarItem">three</div>
+        <div class="helv boldText navBarItem">four</div>
+        <div class="helv boldText navBarItem">five</div>
+        <div class="helv boldText navBarItem">six</div>
+        <div class="helv boldText navBarItem">seven</div>
+        <div class="helv boldText navBarItem">eight</div>
+        <div class="helv boldText navBarItem">nine</div>
+        <div class="helv boldText navBarItem">ten</div>
+        <div class="helv boldText navBarItem">eleven</div>
+        <div class="helv boldText navBarItem">twelve</div>
+    </div>
+    <hr align="left" id="headerDivider">
+</div>
+</body>
+</html>
