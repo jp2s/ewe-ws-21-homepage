@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise One</title>
+    <style>
+        /*---------- flex ----------*/
+        .container {
+            display: flex;
+            flex-wrap: wrap
+        }
+
+        .taskGrid {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            row-gap: 14px;
+        }
+
+        /*---------- typography ----------*/
+        @font-face {
+            font-family: "appleGaramond";
+            src: url("/fonts/apple_garamond/AppleGaramond-BoldItalic.ttf");
+        }
+
+        .helv {
+            font-family: "Helvetica Neue", serif;
+        }
+
+        .boldText {
+            font-weight: bold;
+        }
+
+        .italic {
+            font-family: appleGaramond;
+        }
+
+        #exTitle {
+            font-size: 50px;
+            background-color: turquoise;
+        }
+
+        /*---------- other ----------*/
+
+        #exGrid {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            row-gap: 30px;
+        }
+
+        .taskTitle {
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        .taskRequest {
+            font-family: appleGaramond;
+            font-size: 20px;
+        }
+
+        .taskReply {
+            font-family: "Helvetica Neue";
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="exGrid" class="container">
+    <div id="exTitle" class="italic">Lerneinheit 2: CSS 1. Teil</div>
+    <div>
+    </div>
+</div>
+</body>
+</html>

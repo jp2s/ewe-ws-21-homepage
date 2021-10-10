@@ -1,0 +1,90 @@
+body {
+    font-family: "Helvetica Neue", serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*---------- typography ----------*/
+@font-face {
+    font-family: "appleGaramondBoldItalic";
+    src: url("../fonts/apple_garamond/AppleGaramond-BoldItalic.ttf");
+}
+
+@font-face {
+    font-family: "appleGaramond";
+    src: url("../fonts/apple_garamond/AppleGaramond.ttf");
+}
+
+.helv {
+    font-family: "Helvetica Neue", serif;
+}
+
+.gara {
+    font-family: appleGaramond, serif;
+}
+
+.garaBoldItalic {
+    font-family: appleGaramondBoldItalic, serif;
+}
+
+.boldText {
+    font-weight: bold;
+}
+
+/*---------- header ----------*/
+#header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 20px;
+    margin-bottom: 50px;
+}
+
+#headerTitle {
+    font-size: 17px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+#headerDivider {
+    width: 30%;
+    border: 4px solid black;
+}
+
+#navBar {
+    width: 80%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.navBarItem {
+    font-size: 70px;
+}
+
+.navBarItem:hover {
+    color: hotpink;
+    transition-duration: 0.3s;
+}
+
+/*---------- other ----------*/
+body {
+    margin: 3%;
+}
+
+.dots {
+    width: 200px;
+    height: 100px;
+    background-size: 10px 10px;
+    background-image: radial-gradient(turquoise 42%, transparent 33%);
+}
+
+#welcomeText {
+    font-size: 40px;
+}
