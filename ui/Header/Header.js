@@ -1,11 +1,11 @@
-const baseUrl = "http://www2.inf.h-brs.de/~jplein2s"
+const baseUrl = "//www2.inf.h-brs.de/~jplein2s"
 
-const goToPage = (page) => `{window.location.pathname = '${baseUrl}/pages/${page}.html'}`
-const goToHome = () => `{window.location.pathname = '${baseUrl}/index.html'}`
+const goToHome = `{window.location.href = '${baseUrl}';}`
+const goToPage = (page) => `{window.location.href = '${baseUrl}/pages/${page}.html';}`
 
 const renderHeader = () =>
     `
-    <div id="headerTitle" class="container" onclick="${goToHome()}">
+    <div id="headerTitle" class="container" onclick="${goToHome}">
         <div class="boldText">2021 WS - Einführung in Web Engineering</div>
         <div>Homepage</div>
     </div>
