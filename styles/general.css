@@ -1,39 +1,15 @@
 body {
     font-family: "Helvetica Neue", serif;
+    margin: 3%;
 }
-
 .container {
     display: flex;
     flex-wrap: wrap;
 }
-
 /*---------- typography ----------*/
-@font-face {
-    font-family: "appleGaramondBoldItalic";
-    src: url("../fonts/apple_garamond/AppleGaramond-BoldItalic.ttf");
-}
-
-@font-face {
-    font-family: "appleGaramond";
-    src: url("../fonts/apple_garamond/AppleGaramond.ttf");
-}
-
-.helv {
-    font-family: "Helvetica Neue", serif;
-}
-
-.gara {
-    font-family: appleGaramond, serif;
-}
-
-.garaBoldItalic {
-    font-family: appleGaramondBoldItalic, serif;
-}
-
 .boldText {
     font-weight: bold;
 }
-
 /*---------- header ----------*/
 #header {
     flex-direction: column;
@@ -51,6 +27,9 @@ body {
     column-gap: 10px;
     row-gap: 10px;
 }
+#headerTitle:hover {
+    color: hotpink;
+}
 
 #headerDivider {
     width: 30%;
@@ -66,18 +45,14 @@ body {
 
 .navBarItem {
     font-size: 70px;
+    font-weight: bold;
 }
-
 .navBarItem:hover {
     color: hotpink;
+    cursor: pointer;
     transition-duration: 0.3s;
 }
-
 /*---------- other ----------*/
-body {
-    margin: 3%;
-}
-
 .dots {
     width: 200px;
     height: 100px;
@@ -87,4 +62,39 @@ body {
 
 #welcomeText {
     font-size: 40px;
+}
+/*---------- exercise one ----------*/
+.oneExerciseWrapperClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+.oneExerciseTitle {
+    font-size: 70px;
+    font-family: appleGaramond;
+    color: teal;
+}
+.oneTaskWrapperClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+.oneTaskTitle {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.oneTaskRequest {
+    width: 70%;
+    font-family: appleGaramondBoldItalic;
+    font-size: 25px;
+}
+.oneTaskReply {
+    font-size: 20px;
+    width: 30%;
+    text-align: justify;
+    margin-bottom: 10px;
 }
