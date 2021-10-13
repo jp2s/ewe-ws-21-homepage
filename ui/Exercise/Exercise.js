@@ -33,7 +33,7 @@ const renderExercise = (
         </div>
     `
 
-export const renderComponent = (
+export const renderComponentExercise = (
     query,
     givenId,
     givenClass,

@@ -1,7 +1,7 @@
 import {exerciseOne} from "../db/exercises.js";
-import {renderComponent} from "../ui/Exercise/Exercise.js";
+import {renderComponentExercise} from "../ui/Exercise/Exercise.js";
 
-renderComponent(
+renderComponentExercise(
     "cOne",
     "exOne",
     "exerciseOne",
