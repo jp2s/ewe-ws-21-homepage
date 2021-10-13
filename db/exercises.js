@@ -80,15 +80,79 @@ export const exerciseOne = {
                 {
                     requestText: "Mit welchem HTML-Code (ohne CSS, nur mit HTML-Tags) kann man diesen Wireframe exakt nachbilden?",
                     imgSrc: "https://kaul.inf.h-brs.de/we/assets/img/wireframe01.jpg",
+                    code:
+                        "&lt!DOCTYPE html&gt\n" +
+                        "&lthtml lang=\"en\"&gt\n" +
+                        "&lthead&gt\n" +
+                        "    &ltmeta charset=\"UTF-8\"&gt\n" +
+                        "    &lttitle&gtLerneinheit 1: HTTP, URI und HTML&lt/title&gt\n" +
+                        "&lt/head&gt\n" +
+                        "&ltbody&gt\n" +
+                        "    &lth1&gtÜbung 1.2: Inventors of the Web&lt/h1&gt\n" +
+                        "    &ltul&gt\n" +
+                        "        &ltli&gt&ltb&gt&ltu&gt&ltmark&gtTim Berners-Lee:&lt/mark&gt&lt/u&gt&lt/b&gt WWW, HTTP, HTML, URI&lt/li&gt\n" +
+                        "        &ltli&gt&ltb&gt&ltu&gtHakom Lie and Bert Bos:&lt/u&gt&lt/b&gt CSS&lt/li&gt\n" +
+                        "        &ltli&gt&ltb&gt&ltu&gtBrendan Eich:&lt/u&gt&lt/b&gt JavaScript&lt/li&gt\n" +
+                        "    &lt/ul&gt\n" +
+                        "\n" +
+                        "    &lthr&gt\n" +
+                        "    &ltbr&gt\n" +
+                        "\n" +
+                        "    &lth1&gtInventors of the WWW&lt/h1&gt\n" +
+                        "    &lttable border=\"10\"&gt\n" +
+                        "        &lttr&gt&lttd colspan=\"4\" align=\"center\"&gt&ltb&gtInventors of the WWW&lt/b&gt&lt/td&gt&lt/tr&gt\n" +
+                        "        &lttr&gt\n" +
+                        "            &lttd align=\"center\"&gt&ltb&gtWWW&lt/b&gt&lt/td&gt\n" +
+                        "            &lttd align=\"center\"&gt&ltb&gtHTML&lt/b&gt&lt/td&gt\n" +
+                        "            &lttd align=\"center\"&gt&ltb&gtCSS&lt/b&gt&lt/td&gt\n" +
+                        "            &lttd align=\"center\"&gt&ltb&gtJavaScript&lt/b&gt&lt/td&gt\n" +
+                        "        &lt/tr&gt\n" +
+                        "        &lttr&gt\n" +
+                        "            &lttd&gt&ltmark&gtTim Berners-Lee&lt/mark&gt&lt/td&gt\n" +
+                        "            &lttd&gt&ltmark&gtTim Berners-Lee&lt/mark&gt&lt/td&gt\n" +
+                        "            &lttd&gtHakom Lie and Bert Bos&lt/td&gt\n" +
+                        "            &lttd&gtBrendan Eich&lt/td&gt\n" +
+                        "        &lt/tr&gt\n" +
+                        "    &lt/table&gt\n" +
+                        "\n" +
+                        "    &ltbr&gt\n" +
+                        "    &lthr&gt\n" +
+                        "\n" +
+                        "    &lttable&gt\n" +
+                        "        &ltth colspan=\"3\"&gtInventors of the WWW&lt/th&gt\n" +
+                        "        &lttr&gt&lttd colspan=\"3\" align=\"center\"&gt&lthr&gt&lt/td&gt&lt/tr&gt\n" +
+                        "        &lttr&gt\n" +
+                        "            &lttd align=\"center\"&gt&ltb&gtHTML&lt/b&gt&lt/td&gt\n" +
+                        "            &lttd&gt&ltb&gt|&lt/b&gt&lt/td&gt\n" +
+                        "            &lttd align=\"center\"&gt&ltb&gtJavaScript&lt/b&gt&lt/td&gt\n" +
+                        "        &lt/tr&gt\n" +
+                        "        &lttr&gt\n" +
+                        "            &lttd&gt&ltimg src=\"https://kaul.inf.h-brs.de/we/assets/img/tbl.jpg\"&gt&lt/td&gt\n" +
+                        "            &lttd&gt&ltb&gt|&lt/b&gt&lt/td&gt\n" +
+                        "            &lttd&gt&ltimg src=\"https://kaul.inf.h-brs.de/we/assets/img/eich.jpg\"&gt&lt/td&gt\n" +
+                        "        &lt/tr&gt\n" +
+                        "        &lttr&gt\n" +
+                        "            &lttd&gt&ltmark&gtTim Berners-Lee&lt/mark&gt&lt/td&gt\n" +
+                        "            &lttd&gt&ltb&gt|&lt/b&gt&lt/td&gt\n" +
+                        "            &lttd&gtBrendan Eich&lt/td&gt\n" +
+                        "        &lt/tr&gt\n" +
+                        "    &lt/table&gt\n" +
+                        "\n" +
+                        "    &ltbr&gt\n" +
+                        "    &lthr&gt\n" +
+                        "&lt/body&gt\n" +
+                        "&lt/html&gt",
                 },
                 "oneTaskWrapperClass",
                 "oneTaskRequest",
                 "oneImgPreviewWrapperClass",
                 "oneImgPreviewClass",
-                "oneButtonClass",
+                "oneOpenButtonClass",
+                "oneCloseButtonClass",
                 "oneModalClass",
                 "oneModalWrapper",
-                "oneImgClass"
+                "oneImgClass",
+                "oneCodeWrapperClass",
             ),
         },
     ]
