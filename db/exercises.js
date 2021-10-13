@@ -1,3 +1,5 @@
+import {renderWireframe} from "../ui/Wireframe/Wireframe.js";
+
 export const exerciseOne = {
     title: "Lerneinheit 1: HTTP, URI und HTML",
     tasks: [
@@ -74,12 +76,20 @@ export const exerciseOne = {
         },
         {
             title: "1.4. HTML Wireframe (4 Punkte)",
-            text: [
+            wireframe: renderWireframe(
                 {
-                    request: "Following",
-                    reply: "following",
+                    requestText: "Mit welchem HTML-Code (ohne CSS, nur mit HTML-Tags) kann man diesen Wireframe exakt nachbilden?",
+                    imgSrc: "https://kaul.inf.h-brs.de/we/assets/img/wireframe01.jpg",
                 },
-            ]
+                "oneTaskWrapperClass",
+                "oneTaskRequest",
+                "oneImgPreviewWrapperClass",
+                "oneImgPreviewClass",
+                "oneButtonClass",
+                "oneModalClass",
+                "oneModalWrapper",
+                "oneImgClass"
+            ),
         },
     ]
 }
