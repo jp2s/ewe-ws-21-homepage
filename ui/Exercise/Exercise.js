@@ -8,7 +8,8 @@ const renderTask = (data, taskWrapperClass, titleClass, requestClass, replyClass
     `
     <div class="${taskWrapperClass}">
         <div class="${titleClass}">${data.title}</div>
-        ${data.text.map(item => renderRequestReply(item.request, item.reply, requestClass, replyClass)).join('')}
+        ${data.text ? data.text.map(item => renderRequestReply(item.request, item.reply, requestClass, replyClass)).join('') : ""}
+        ${data.wireframe ? data.wireframe : ""}
     </div>
     `
 
