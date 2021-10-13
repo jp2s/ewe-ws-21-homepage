@@ -5,12 +5,23 @@ const renderWireframeRequest = (requestText, requestClass) =>
     <div class="${requestClass}">${requestText}</div>
     `
 
-const renderImagePreview = (imgSrc, imgPreviewWrapperClass, imgPreviewClass, buttonClass, modalClass, modalWrapper, imgClass) =>
+const renderImagePreview = (imgSrc, imgPreviewWrapperClass, imgPreviewClass, openButtonClass, closeButtonClass, modalClass, modalWrapper, imgClass) =>
     `
     <div class="${imgPreviewWrapperClass}">
         <img src=${imgSrc} class="${imgPreviewClass}">
-        ${renderComponentModal(modalClass, modalWrapper, buttonClass, `<img src="${imgSrc}" class="${imgClass}">`)}
+        ${renderComponentModal(modalClass, modalWrapper, openButtonClass, closeButtonClass, `<img src="${imgSrc}" class="${imgClass}">`)}
     </div>
+    `
+
+const renderCode = (codeData, codeWrapperClass) =>
+    `
+    <div class="${codeWrapperClass}">
+        <pre>
+            <code>        
+                ${codeData} 
+            </code>
+        </pre>
+    </div
     `
 
 export const renderWireframe = (
@@ -19,10 +30,12 @@ export const renderWireframe = (
     requestClass,
     imgPreviewWrapperClass,
     imgPreviewClass,
-    buttonClass,
+    openButtonClass,
+    closeButtonClass,
     modalClass,
     modalWrapper,
     imgClass,
+    codeWrapperClass,
 ) =>
     `
     <div class=${wireframeWrapperClass}>
@@ -34,11 +47,14 @@ export const renderWireframe = (
             data.imgSrc,
             imgPreviewWrapperClass,
             imgPreviewClass,
-            buttonClass,
+            openButtonClass,
+            closeButtonClass,
             modalClass,
             modalWrapper,
             imgClass,
         )}
+        ${renderCode(data.code, codeWrapperClass)
+        }
     </div>
     `
 
