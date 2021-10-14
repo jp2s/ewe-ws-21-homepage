@@ -143,7 +143,7 @@ export const exerciseOne = {
                         "&lt/body&gt\n" +
                         "&lt/html&gt",
                 },
-                "oneTaskWrapperClass",
+                "oneWireframeWrapperClass",
                 "oneTaskRequest",
                 "oneImgPreviewWrapperClass",
                 "oneImgPreviewClass",
