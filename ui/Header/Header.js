@@ -11,7 +11,7 @@ const renderHeader = () =>
     </div>
     <div id="navBar" class="container">
         <div class="navBarItem" onclick="${goToPage('one')}">one</div>
-        <div class="navBarItem">two</div>
+        <div class="navBarItem" onclick="${goToPage('two')}">two</div>
         <div class="navBarItem">three</div>
         <div class="navBarItem">four</div>
         <div class="navBarItem">five</div>
