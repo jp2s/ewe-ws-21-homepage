@@ -1,4 +1,4 @@
-const baseUrl = "//www2.inf.h-brs.de/~jplein2s"
+import {baseUrl} from "../../util/util.js";
 
 const goToHome = `{window.location.href = '${baseUrl}';}`
 const goToPage = (page) => `{window.location.href = '${baseUrl}/pages/${page}.html';}`
