@@ -1,0 +1,124 @@
+/*---------- exercise ----------*/
+.oneExerciseWrapperClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+.oneExerciseTitle {
+    font-size: 70px;
+    font-family: appleGaramond;
+    color: teal;
+}
+.oneTaskWrapperClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+.oneTaskTitle {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.oneTaskRequest {
+    width: 70%;
+    font-family: appleGaramondBoldItalic;
+    font-size: 25px;
+}
+.oneTaskReply {
+    font-size: 20px;
+    width: 30%;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+/*---------- wireframe ----------*/
+.oneWireframeWrapperClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 32px;
+}
+.oneImgPreviewWrapperClass {
+    background: teal;
+    width: 30%;
+    position: relative;
+}
+.oneImgPreviewWrapperClass:hover {
+    background: rgb(255,196,248);
+    background: linear-gradient(225deg, rgba(255,196,248,1) 0%, rgba(0,128,128,1) 100%);
+}
+.oneImgPreviewClass{
+    opacity: 0.5;
+    width: 100%;
+}
+.oneOpenButtonClass {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: appleGaramondBoldItalic;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    border: 4px solid teal;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.8);
+}
+.oneOpenButtonClass:hover {
+    border: 4px solid teal;
+    color: white;
+    background: rgba(0,128,128,0.8);
+    transition-duration: 0.3s;
+}
+.oneCloseButtonClass {
+    cursor: pointer;
+    font-family: appleGaramondBoldItalic;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    border: 4px solid teal;
+    background: rgba(255, 255, 255, 0.8);
+    width: 20%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.oneCloseButtonClass:hover {
+    border: 4px solid teal;
+    color: white;
+    background: rgba(0,128,128,0.8);
+    transition-duration: 0.3s;
+}
+.oneModalClass {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background: rgb(255,196,248);
+    background: linear-gradient(225deg, rgba(255,196,248,0.9) 0%, rgba(0,128,128,0.9) 100%);
+    /*overflow: hidden;*/
+}
+.oneModalWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    row-gap: 20px;
+}
+.oneImgClass {
+    border: 4px solid teal;
+    height: 80vh;
+}
+/*---------- other ----------*/
+.oneCodeWrapperClass {
+    border: 4px dotted teal;
+    padding: 0px 32px 0px 32px;
+}
