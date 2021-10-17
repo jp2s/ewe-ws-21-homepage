@@ -1,0 +1,137 @@
+/*---------- exercise ----------*/
+.twoExerciseWrapperClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+.twoExerciseTitle {
+    font-size: 70px;
+    font-family: appleGaramond;
+    color: purple;
+}
+.twoTaskWrapperClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+.twoTaskTitle {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.twoTaskRequest {
+    width: 70%;
+    font-family: appleGaramondBoldItalic;
+    font-size: 25px;
+    border: 4px dotted purple;
+    padding: 16px;
+}
+.twoTaskReply {
+    font-size: 20px;
+    width: 70%;
+    text-align: justify;
+    margin-bottom: 10px;
+    border: 4px solid purple;
+    padding: 16px;
+    color: purple;
+    background: rgb(255,215,0);
+    background: linear-gradient(225deg, rgba(255,215,0,0.4) 0%, rgba(128,0,128,0.4) 100%);
+}
+/*.twoTaskReply:hover {*/
+/*    border: 4px solid black;*/
+/*    color: black;*/
+/*    transition-duration: 0.3s;*/
+/*}*/
+/*---------- wireframe ----------*/
+.twoWireframeWrapperClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 32px;
+}
+.twoImgPreviewWrapperClass {
+    background: purple;
+    width: 30%;
+    position: relative;
+}
+.twoImgPreviewWrapperClass:hover {
+    background: rgb(255,215,0);
+    background: linear-gradient(225deg, rgba(255,215,0,0.9) 0%, rgba(128,0,128,0.9) 100%);
+}
+.twoImgPreviewClass{
+    opacity: 0.5;
+    width: 100%;
+}
+.twoOpenButtonClass {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: appleGaramondBoldItalic;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    border: 4px solid purple;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.8);
+}
+.twoOpenButtonClass:hover {
+    border: 4px solid purple;
+    color: white;
+    background: rgba(147,112,219,0.8);
+    transition-duration: 0.3s;
+}
+.twoCloseButtonClass {
+    cursor: pointer;
+    font-family: appleGaramondBoldItalic;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    border: 4px solid purple;
+    background: rgba(255, 255, 255, 0.8);
+    width: 20%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.twoCloseButtonClass:hover {
+    border: 4px solid purple;
+    color: white;
+    background: rgba(147,112,219,0.8);
+    transition-duration: 0.3s;
+}
+.twoModalClassA, .twoModalClassB, .twoModalClassC {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgb(255,215,0);
+    background: linear-gradient(225deg, rgba(255,215,0,0.9) 0%, rgba(128,0,128,0.9) 100%);
+}
+.twoModalWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    row-gap: 20px;
+}
+.twoImgClass {
+    border: 4px solid purple;
+    /*width: 35%;*/
+    height: 80vh;
+}
+/*---------- other ----------*/
+.twoCodeWrapperClass {
+    border: 4px solid purple;
+    padding: 0px 32px 0px 32px;
+    /*max-width: 80vw;*/
+}
