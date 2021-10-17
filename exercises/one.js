@@ -1,4 +1,4 @@
-import {exerciseOne} from "../db/exercises.js";
+import {exerciseOne} from "../db/exerciseOne.js";
 import {renderComponentExercise} from "../ui/Exercise/Exercise.js";
 
 renderComponentExercise(
