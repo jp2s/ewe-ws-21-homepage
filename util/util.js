@@ -1,0 +1,1 @@
+export const baseUrl = "//www2.inf.h-brs.de/~jplein2s"
