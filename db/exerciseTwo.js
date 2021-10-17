@@ -1,3 +1,4 @@
+import {baseUrl} from "../util/util.js";
 import {renderWireframe} from "../ui/Wireframe/Wireframe.js";
 
 export const exerciseTwo = {
@@ -39,7 +40,7 @@ export const exerciseTwo = {
             wireframe: renderWireframe(
                 {
                     requestText: "Schauen Sie sich folgendes Video an und bauen Sie das dynamische Verhalten exakt nach (nur mit HTML und CSS, ohne JavaScript):",
-                    imgSrc: "/img/two/2_2a.png",
+                    imgSrc: `${baseUrl}/img/two/2_2a.png`,
                     code: "&lt!DOCTYPE html&gt\n" +
                         "&lthtml lang='en'&gt\n" +
                         "&lthead&gt\n" +
@@ -392,7 +393,7 @@ export const exerciseTwo = {
             wireframe: renderWireframe(
                 {
                     requestText: "Schauen Sie sich folgendes Video an und bauen Sie das dynamische Verhalten exakt nach (nur mit HTML und CSS, ohne JavaScript):",
-                    imgSrc: "/img/two/2_2b.png",
+                    imgSrc: `${baseUrl}/img/two/2_2b.png`,
                     code: "&lt!DOCTYPE html&gt\n" +
                         "&lthtml lang='en'&gt\n" +
                         "&lthead&gt\n" +
@@ -465,7 +466,7 @@ export const exerciseTwo = {
             wireframe: renderWireframe(
                 {
                     requestText: "Frage: Mit welchem HTML- und CSS-Code kann man diesen Wireframe exakt nachbilden? Schreiben Sie Ihren CSS-Code direkt in die HTML-Datei. Geben Sie Ihren HTML- und CSS-Quellcode zusammen in dieses Textfeld ein:",
-                    imgSrc: "/img/two/2_3.png",
+                    imgSrc: `${baseUrl}/img/two/2_3.png`,
                     code: "&lt!DOCTYPE html&gt\n" +
                         "&lthtml lang='en'&gt\n" +
                         "&lthead&gt\n" +
