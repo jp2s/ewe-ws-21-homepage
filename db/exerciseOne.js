@@ -153,6 +153,11 @@ export const exerciseOne = {
                 "oneModalWrapper",
                 "oneImgClass",
                 "oneCodeWrapperClass",
+                "../wireframes/u01.html",
+                "iframeWrapperClass",
+                "iframeTitleClass",
+                "iframeClass",
+
             ),
         },
     ]

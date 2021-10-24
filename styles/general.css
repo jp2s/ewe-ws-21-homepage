@@ -78,11 +78,18 @@ body {
     font-size: 70px;
     font-family: appleGaramond;
     color: midnightblue;
+    font-weight: bold;
 }
 #welcomeCredits {
-    font-size: 70px;
+    font-size: 180px;
     font-family: appleGaramondBoldItalic;
+    font-family: miami;
     color: black;
+    position: absolute;
+    top: 367px;
+    left: 459px;
+    color: hotpink;
+    font-weight: normal;
 }
 /*---------- other ----------*/
 code {

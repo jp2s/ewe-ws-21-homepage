@@ -21,7 +21,15 @@ const renderCode = (codeData, codeWrapperClass) =>
                 ${codeData} 
             </code>
         </pre>
-    </div
+    </div>
+    `
+
+const renderIframe = (iframeSrc, iframeWrapperClass, iframeTitleClass, iframeClass) =>
+    `
+<!--    <div class="${iframeWrapperClass}">-->
+        <div class="${iframeTitleClass}">Rendered:</div>
+        <iframe width="100%" height="100%" src="${iframeSrc}" class="${iframeClass}"></iframe>
+<!--    </div>-->
     `
 
 export const renderWireframe = (
@@ -36,6 +44,10 @@ export const renderWireframe = (
     modalWrapper,
     imgClass,
     codeWrapperClass,
+    iframeSrc,
+    iframeWrapperClass,
+    iframeTitleClass,
+    iframeClass,
 ) =>
     `
     <div class=${wireframeWrapperClass}>
@@ -53,8 +65,13 @@ export const renderWireframe = (
             modalWrapper,
             imgClass,
         )}
-        ${renderCode(data.code, codeWrapperClass)
-        }
+        ${renderCode(data.code, codeWrapperClass)}
+        ${renderIframe(
+            iframeSrc, 
+            iframeWrapperClass,
+            iframeTitleClass,
+            iframeClass,
+        )}
     </div>
     `
 
