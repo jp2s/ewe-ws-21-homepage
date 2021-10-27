@@ -5,11 +5,24 @@ const renderWireframeRequest = (requestText, requestClass) =>
     <div class="${requestClass}">${requestText}</div>
     `
 
-const renderImagePreview = (imgSrc, imgPreviewWrapperClass, imgPreviewClass, openButtonClass, closeButtonClass, modalClass, modalWrapper, imgClass) =>
+const renderImagePreview = (
+    imgSrc,
+    imgPreviewWrapperClass,
+    imgPreviewClass,
+    openButtonClass,
+    closeButtonClass,
+    modalClass,
+    modalWrapper,
+    imgClass
+) =>
     `
     <div class="${imgPreviewWrapperClass}">
         <img src=${imgSrc} class="${imgPreviewClass}">
-        ${renderComponentModal(modalClass, modalWrapper, openButtonClass, closeButtonClass, `<img src="${imgSrc}" class="${imgClass}">`)}
+        ${renderComponentModal(
+            modalClass, modalWrapper, 
+            openButtonClass, 
+            closeButtonClass, `<img src="${imgSrc}" class="${imgClass}">`
+        )}
     </div>
     `
 
@@ -26,10 +39,10 @@ const renderCode = (codeData, codeWrapperClass) =>
 
 const renderIframe = (iframeSrc, iframeWrapperClass, iframeTitleClass, iframeClass) =>
     `
-<!--    <div class="${iframeWrapperClass}">-->
+    <div class="${iframeWrapperClass}">
         <div class="${iframeTitleClass}">Rendered:</div>
         <iframe width="100%" height="100%" src="${iframeSrc}" class="${iframeClass}"></iframe>
-<!--    </div>-->
+    </div>
     `
 
 export const renderWireframe = (
