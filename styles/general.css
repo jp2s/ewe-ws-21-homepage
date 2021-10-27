@@ -1,3 +1,8 @@
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
 body {
     font-family: "Helvetica Neue", serif;
     margin: 3%;
@@ -55,18 +60,26 @@ body {
 }
 /*---------- welcome ----------*/
 #welcomeDots {
-    width: 230px;
+    margin-top: 50px;
+    width: 140px;
     height: 20px;
     background-size: 10px 10px;
     background-image: radial-gradient(turquoise 42%, transparent 33%);
+}
+#welcome {
+    height: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 #welcomeWrapper {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     column-gap: 16px;
-    row-gap: 16px;
+    row-gap: 24px;
     width: 80%;
+    position: relative;
 }
 #welcomeCreditsWrapper {
     flex-direction: column;
@@ -79,280 +92,17 @@ body {
     font-family: appleGaramond;
     color: midnightblue;
     font-weight: bold;
+    white-space: nowrap;
 }
 #welcomeCredits {
-    font-size: 180px;
-    font-family: appleGaramondBoldItalic;
     font-family: miami;
-    color: black;
-    position: absolute;
-    top: 367px;
-    left: 459px;
+    font-size: 170px;
     color: hotpink;
-    font-weight: normal;
+    position: absolute;
+    top: 20px;
+    left: 414px;
 }
 /*---------- other ----------*/
 code {
     font-family: jetBrainsMono;
 }
-/*!*---------- exercise one ----------*!*/
-/*.oneExerciseWrapperClass {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: flex-start;*/
-/*    align-items: flex-start;*/
-/*    row-gap: 20px;*/
-/*}*/
-/*.oneExerciseTitle {*/
-/*    font-size: 70px;*/
-/*    font-family: appleGaramond;*/
-/*    color: teal;*/
-/*}*/
-/*.oneTaskWrapperClass {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: flex-start;*/
-/*    align-items: flex-start;*/
-/*    row-gap: 10px;*/
-/*}*/
-/*.oneTaskTitle {*/
-/*    font-size: 30px;*/
-/*    margin-bottom: 10px;*/
-/*}*/
-/*.oneTaskRequest {*/
-/*    width: 70%;*/
-/*    font-family: appleGaramondBoldItalic;*/
-/*    font-size: 25px;*/
-/*}*/
-/*.oneTaskReply {*/
-/*    font-size: 20px;*/
-/*    width: 30%;*/
-/*    text-align: justify;*/
-/*    margin-bottom: 10px;*/
-/*}*/
-
-/*.oneWireframeWrapperClass {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: flex-start;*/
-/*    align-items: flex-start;*/
-/*    row-gap: 32px;*/
-/*}*/
-/*.oneImgPreviewWrapperClass {*/
-/*    background: teal;*/
-/*    width: 30%;*/
-/*    position: relative;*/
-/*}*/
-/*.oneImgPreviewWrapperClass:hover {*/
-/*    background: rgb(255,196,248);*/
-/*    background: linear-gradient(225deg, rgba(255,196,248,1) 0%, rgba(0,128,128,1) 100%);*/
-/*}*/
-/*.oneImgPreviewClass{*/
-/*    opacity: 0.5;*/
-/*    width: 100%;*/
-/*}*/
-
-/*.oneOpenButtonClass {*/
-/*    cursor: pointer;*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    font-family: appleGaramondBoldItalic;*/
-/*    font-size: 30px;*/
-/*    text-align: center;*/
-/*    color: black;*/
-/*    border: 4px solid teal;*/
-/*    padding: 16px;*/
-/*    background: rgba(255, 255, 255, 0.8);*/
-/*}*/
-/*.oneOpenButtonClass:hover {*/
-/*    border: 4px solid teal;*/
-/*    color: white;*/
-/*    background: rgba(0,128,128,0.8);*/
-/*    transition-duration: 0.3s;*/
-/*}*/
-/*.oneCloseButtonClass {*/
-/*    cursor: pointer;*/
-/*    font-family: appleGaramondBoldItalic;*/
-/*    font-size: 30px;*/
-/*    text-align: center;*/
-/*    color: black;*/
-/*    border: 4px solid teal;*/
-/*    background: rgba(255, 255, 255, 0.8);*/
-/*    width: 35%;*/
-/*    padding-top: 8px;*/
-/*    padding-bottom: 8px;*/
-/*}*/
-/*.oneCloseButtonClass:hover {*/
-/*    border: 4px solid teal;*/
-/*    color: white;*/
-/*    background: rgba(0,128,128,0.8);*/
-/*    transition-duration: 0.3s;*/
-/*}*/
-/*.oneModalClass {*/
-/*    position: fixed;*/
-/*    z-index: 1;*/
-/*    left: 0;*/
-/*    top: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    overflow: auto;*/
-/*    background: rgb(255,196,248);*/
-/*    background: linear-gradient(225deg, rgba(255,196,248,0.9) 0%, rgba(0,128,128,0.9) 100%);*/
-/*}*/
-
-/*.oneModalWrapper {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    row-gap: 20px;*/
-/*}*/
-/*.oneImgClass {*/
-/*    border: 4px solid teal;*/
-/*    width: 35%;*/
-/*}*/
-/*.oneCodeWrapperClass {*/
-/*    border: 4px dotted teal;*/
-/*    padding: 0px 32px 0px 32px;*/
-/*}*/
-
-/*!*---------- exercise two ----------*!*/
-/*.twoExerciseWrapperClass {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: flex-start;*/
-/*    align-items: flex-start;*/
-/*    row-gap: 20px;*/
-/*}*/
-/*.twoExerciseTitle {*/
-/*    font-size: 70px;*/
-/*    font-family: appleGaramond;*/
-/*    color: purple;*/
-/*}*/
-/*.twoTaskWrapperClass {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: flex-start;*/
-/*    align-items: flex-start;*/
-/*    row-gap: 20px;*/
-/*}*/
-/*.twoTaskTitle {*/
-/*    font-size: 30px;*/
-/*    margin-bottom: 10px;*/
-/*}*/
-/*.twoTaskRequest {*/
-/*    width: 70%;*/
-/*    font-family: appleGaramondBoldItalic;*/
-/*    font-size: 25px;*/
-/*    border: 4px dotted purple;*/
-/*    padding: 16px;*/
-/*}*/
-/*.twoTaskReply {*/
-/*    font-size: 20px;*/
-/*    width: 30%;*/
-/*    text-align: justify;*/
-/*    margin-bottom: 10px;*/
-/*    border: 4px solid purple;*/
-/*    padding: 16px;*/
-/*    color: wheat;*/
-/*    background: rgb(255,215,0);*/
-/*    background: linear-gradient(225deg, rgba(255,215,0,1) 0%, rgba(128,0,128,1) 100%);*/
-/*}*/
-/*.twoTaskReply:hover {*/
-/*    background: white;*/
-/*    color: black;*/
-/*    transition-duration: 0.3s;*/
-/*}*/
-
-/*.twoWireframeWrapperClass {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: flex-start;*/
-/*    align-items: flex-start;*/
-/*    row-gap: 32px;*/
-/*}*/
-/*.twoImgPreviewWrapperClass {*/
-/*    background: purple;*/
-/*    width: 30%;*/
-/*    position: relative;*/
-/*}*/
-/*.twoImgPreviewWrapperClass:hover {*/
-/*    background: rgb(255,215,0);*/
-/*    background: linear-gradient(225deg, rgba(255,215,0,0.9) 0%, rgba(128,0,128,0.9) 100%);*/
-/*}*/
-/*.twoImgPreviewClass{*/
-/*    opacity: 0.5;*/
-/*    width: 100%;*/
-/*}*/
-
-/*.twoOpenButtonClass {*/
-/*    cursor: pointer;*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    font-family: appleGaramondBoldItalic;*/
-/*    font-size: 30px;*/
-/*    text-align: center;*/
-/*    color: black;*/
-/*    border: 4px solid purple;*/
-/*    padding: 16px;*/
-/*    background: rgba(255, 255, 255, 0.8);*/
-/*}*/
-/*.twoOpenButtonClass:hover {*/
-/*    border: 4px solid purple;*/
-/*    color: white;*/
-/*    background: rgba(147,112,219,0.8);*/
-/*    transition-duration: 0.3s;*/
-/*}*/
-/*.twoCloseButtonClass {*/
-/*    cursor: pointer;*/
-/*    font-family: appleGaramondBoldItalic;*/
-/*    font-size: 30px;*/
-/*    text-align: center;*/
-/*    color: black;*/
-/*    border: 4px solid purple;*/
-/*    background: rgba(255, 255, 255, 0.8);*/
-/*    width: 35%;*/
-/*    padding-top: 8px;*/
-/*    padding-bottom: 8px;*/
-/*}*/
-/*.twoCloseButtonClass:hover {*/
-/*    border: 4px solid purple;*/
-/*    color: white;*/
-/*    background: rgba(147,112,219,0.8);*/
-/*    transition-duration: 0.3s;*/
-/*}*/
-/*.twoModalClass {*/
-/*    position: fixed;*/
-/*    z-index: 1;*/
-/*    left: 0;*/
-/*    top: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    overflow: auto;*/
-/*    background: rgb(255,215,0);*/
-/*    background: linear-gradient(225deg, rgba(255,215,0,0.9) 0%, rgba(128,0,128,0.9) 100%);*/
-/*}*/
-
-/*.twoModalWrapper {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    row-gap: 20px;*/
-/*}*/
-/*.twoImgClass {*/
-/*    border: 4px solid purple;*/
-/*    width: 35%;*/
-/*}*/
-/*.twoCodeWrapperClass {*/
-/*    border: 4px solid purple;*/
-/*    padding: 0px 32px 0px 32px;*/
-/*}*/
