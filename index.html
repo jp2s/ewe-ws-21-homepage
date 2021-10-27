@@ -19,18 +19,21 @@
             font-family: "jetBrainsMono";
             src: url("fonts/JetBrainsMono/JetBrainsMono-Regular.ttf");
         }
+
+        @font-face {
+            font-family: "miami";
+            src: url("fonts/sabeny_betranss/Sabeny Betranss.ttf")
+        }
     </style>
 </head>
 <body>
     <script id="cHeader" src="ui/Header/Header.js" type="module"></script>
-    <div id="welcomeWrapper" class="container">
-        <div id="welcomeText">Welcome to the Web Engineering Homepage of</div>
-        <div style="width: 100%;">
-            <div id="welcomeCreditsWrapper" class="container">
-                <div id="welcomeCredits">jplein2s</div>
-                <div id="welcomeDots"></div>
-            </div>
+    <div id="welcome" class="container">
+        <div id="welcomeWrapper" class="container">
+            <div id="welcomeText">Welcome to the Web Engineering<br>Homepage of</div>
+            <div id="welcomeCredits">jplein2s</div>
         </div>
     </div>
+    <div id="welcomeDots"></div>
 </body>
 </html>
