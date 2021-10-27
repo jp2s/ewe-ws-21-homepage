@@ -87,26 +87,3 @@ export const renderWireframe = (
         )}
     </div>
     `
-
-// export const renderComponentWireframe = (
-//     query,
-//     givenId,
-//     givenClass,
-//     data,
-//     wireframeWrapperClass,
-//     requestClass,
-//     imgPreviewWrapperClass,
-//     imgPreviewClass,
-// ) => {
-//     const current = document.querySelector(`script#${query}`);
-//     const replacement = document.createElement("div");
-//     replacement.setAttribute("id", givenId);
-//     replacement.setAttribute("class", givenClass);
-//     replacement.innerHTML = renderWireframe(
-//         data,
-//         wireframeWrapperClass,
-//         requestClass,
-//         imgPreviewWrapperClass,
-//         imgPreviewClass);
-//     current.parentNode.replaceChild(replacement, current)
-// }
