@@ -8,7 +8,7 @@ export const exerciseTwo = {
             title: "2.1. CSS Selektoren und CSS Farben (2 Punkte)",
             text: [
                 {
-                    request: "Berechnen Sie die Spezifität folgender CSS-Selektoren:<br>" +
+                    request: "<div style='margin-bottom: 16px;'>Berechnen Sie die Spezifität folgender CSS-Selektoren:</div>" +
                         "    1. <code>div div div:focus .inner</code><br>" +
                         "    2. <code>h1 + div.main</code><br>" +
                         "    3. <code>div a:link[href*='h-brs']</code><br>" +
@@ -21,12 +21,12 @@ export const exerciseTwo = {
                         "5. 112<br>",
                 },
                 {
-                    request: "Rechnen Sie folgende RGB-Werte in HSL-Werte um:<br>" +
-                        "    1. <code>#ffffff</code><br>" +
-                        "    2. <code>#000</code><br>" +
-                        "    3. <code>#ab0978</code><br>" +
-                        "    4. <code>rgb(127,255,33)</code><br>" +
-                        "    5. <code>rgba(255,127,33,0.8)</code><br>",
+                    request: "<div style='margin-bottom: 16px;'>Rechnen Sie folgende RGB-Werte in HSL-Werte um:</div>" +
+                        "    1. <code style='color: #ffffff; background-color: midnightblue;'>#ffffff</code><br>" +
+                        "    2. <code style='color: #ffffff; background-color: midnightblue;'>#000</code><br>" +
+                        "    3. <code style='color: #ab0978;'>#ab0978</code><br>" +
+                        "    4. <code style='color: rgb(127,255,33);'>rgb(127,255,33)</code><br>" +
+                        "    5. <code style='color: rgba(255,127,33,0.8);'>rgba(255,127,33,0.8)</code><br>",
                     reply: "1. H: 0, S: 0, L: 100<br>" +
                         "2. H: 0, S: 0, L: 0<br>" +
                         "3. H: 319, S: 90, L: 35<br>" +
