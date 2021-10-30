@@ -17,7 +17,7 @@ const renderImagePreview = (
 ) =>
     `
     <div class="${imgPreviewWrapperClass}">
-        <img src=${imgSrc} class="${imgPreviewClass}">
+        <img src="${imgSrc}" class="${imgPreviewClass}">
         ${renderComponentModal(
             modalClass, modalWrapper, 
             openButtonClass, 
@@ -26,22 +26,51 @@ const renderImagePreview = (
     </div>
     `
 
-const renderCode = (codeData, codeWrapperClass) =>
+const renderCode = (codeData, codeTitleClass, codeWrapperClass) =>
     `
-    <div class="${codeWrapperClass}">
-        <pre>
-            <code>        
-                ${codeData} 
-            </code>
-        </pre>
+    <div style="width: 100%; height: 100%;">
+        <div class="${codeTitleClass}">Wireframe Code:</div>
+        <div class="${codeWrapperClass}">
+            <pre>
+                <code>        
+                    ${codeData} 
+                </code>
+            </pre>
+        </div>
     </div>
     `
 
-const renderIframe = (iframeSrc, iframeWrapperClass, iframeTitleClass, iframeClass) =>
+// const renderIframe = (iframeSrc, iframeWrapperClass, iframeTitleClass, iframeClass) =>
+//     `
+//     <div class="${iframeWrapperClass}">
+//         <div class="${iframeTitleClass}">Rendered:</div>
+//         <iframe width="100%" height="100%" src="${iframeSrc}" class="${iframeClass}"></iframe>
+//     </div>
+//     `
+
+const renderWireframePagePreview = (
+    iframeTitleClass,
+    wireframePageSrc,
+    wireframePagePreviewWrapperClass,
+    wireframePagePreviewClass,
+    openButtonClass,
+    closeButtonClass,
+    wireframePageModalClass,
+    wireframePageModalWrapper,
+    wireframePageClass
+) =>
     `
-    <div class="${iframeWrapperClass}">
-        <div class="${iframeTitleClass}">Rendered:</div>
-        <iframe width="100%" height="100%" src="${iframeSrc}" class="${iframeClass}"></iframe>
+    <div style="width: 100%; height: 100%;">
+        <div class="${iframeTitleClass}">Rendered Wireframe Code:</div>
+        <div class="${wireframePagePreviewWrapperClass}">
+            <iframe src="${wireframePageSrc}" class="${wireframePagePreviewClass}" frameBorder="0"></iframe>
+            ${renderComponentModal(
+                wireframePageModalClass, 
+                wireframePageModalWrapper,
+                openButtonClass,
+                closeButtonClass, `<iframe src="${wireframePageSrc}" class="${wireframePageClass}"></iframe>`
+            )}
+        </div>
     </div>
     `
 
@@ -56,11 +85,15 @@ export const renderWireframe = (
     modalClass,
     modalWrapper,
     imgClass,
+    codeTitleClass,
     codeWrapperClass,
-    iframeSrc,
-    iframeWrapperClass,
     iframeTitleClass,
-    iframeClass,
+    wireframePageSrc,
+    wireframePagePreviewWrapperClass,
+    wireframePagePreviewClass,
+    wireframePageModalClass,
+    wireframePageModalWrapper,
+    wireframePageClass
 ) =>
     `
     <div class=${wireframeWrapperClass}>
@@ -78,12 +111,17 @@ export const renderWireframe = (
             modalWrapper,
             imgClass,
         )}
-        ${renderCode(data.code, codeWrapperClass)}
-        ${renderIframe(
-            iframeSrc, 
-            iframeWrapperClass,
+        ${renderCode(data.code, codeTitleClass, codeWrapperClass)}
+        ${renderWireframePagePreview(
             iframeTitleClass,
-            iframeClass,
+            wireframePageSrc,
+            wireframePagePreviewWrapperClass,
+            wireframePagePreviewClass,
+            openButtonClass,
+            closeButtonClass,
+            wireframePageModalClass,
+            wireframePageModalWrapper,
+            wireframePageClass
         )}
     </div>
     `
