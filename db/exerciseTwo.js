@@ -36,7 +36,7 @@ export const exerciseTwo = {
             ]
         },
         {
-            title: "2.2. CSS Positionierung (4 Punkte) First Part",
+            title: "2.2. CSS Positionierung (4 Punkte) / First Part",
             wireframe: renderWireframe(
                 {
                     requestText: "Schauen Sie sich folgendes Video an und bauen Sie das dynamische Verhalten exakt nach (nur mit HTML und CSS, ohne JavaScript):",
@@ -65,10 +65,10 @@ export const exerciseTwo = {
                         "            padding: 16px;\n" +
                         "        }\n" +
                         "        .header {\n" +
-                        "\t\t    top: 0;\n" +
+                        "            top: 0;\n" +
                         "            position: sticky;\n" +
                         "            border: 4px solid blue;\n" +
-                        "\t\t    background-color: rgba(255, 255, 255, 0.9);\n" +
+                        "            background-color: rgba(255, 255, 255, 0.9);\n" +
                         "        }\n" +
                         "        h2 {\n" +
                         "            margin-left: 16px;\n" +
@@ -79,55 +79,6 @@ export const exerciseTwo = {
                         "&ltdiv class='container wrapper'&gt\n" +
                         "    &ltdiv class='header'&gt\n" +
                         "        &lth2&gtErste Überschrift&lt/h2&gt\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
                         "    &lt/div&gt\n" +
                         "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
                         "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
@@ -175,107 +126,9 @@ export const exerciseTwo = {
                         "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
                         "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
                         "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
                         "\n" +
                         "    &ltdiv class='header'&gt\n" +
                         "        &lth2&gtDritte Überschrift&lt/h2&gt\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
                         "    &lt/div&gt\n" +
                         "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
                         "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
@@ -323,55 +176,6 @@ export const exerciseTwo = {
                         "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
                         "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
                         "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
-                        "    &ltdiv&gtLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\n" +
-                        "        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet\n" +
-                        "        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,\n" +
-                        "        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed\n" +
-                        "        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\n" +
-                        "        takimata sanctus est Lorem ipsum dolor sit amet.\n" +
-                        "    &lt/div&gt\n" +
                         "&lt/div&gt\n" +
                         "&lt/body&gt\n" +
                         "&lt/html&gt",
@@ -385,11 +189,19 @@ export const exerciseTwo = {
                 "twoModalClassA",
                 "twoModalWrapper",
                 "twoImgClass",
+                "twoCodeTitleClass",
                 "twoCodeWrapperClass",
+                "twoIframeTitleClass",
+                "../wireframes/u02-t2-1.html",
+                "twoWireframePagePreviewWrapperClass",
+                "twoWireframePagePreviewClass",
+                "twoWireframePageModalClass_u02-t2-1",
+                "twoWireframePageModalWrapper",
+                "twoWireframePageClass"
             ),
         },
         {
-            title: "2.2. CSS Positionierung (4 Punkte) Second Part",
+            title: "2.2. CSS Positionierung (4 Punkte) / Second Part",
             wireframe: renderWireframe(
                 {
                     requestText: "Schauen Sie sich folgendes Video an und bauen Sie das dynamische Verhalten exakt nach (nur mit HTML und CSS, ohne JavaScript):",
@@ -458,14 +270,22 @@ export const exerciseTwo = {
                 "twoModalClassB",
                 "twoModalWrapper",
                 "twoImgClass",
+                "twoCodeTitleClass",
                 "twoCodeWrapperClass",
+                "twoIframeTitleClass",
+                "../wireframes/u02-t2-2.html",
+                "twoWireframePagePreviewWrapperClass",
+                "twoWireframePagePreviewClass",
+                "twoWireframePageModalClass_u02-t2-2",
+                "twoWireframePageModalWrapper",
+                "twoWireframePageClass"
             ),
         },
         {
-            title: "2.3. Wireframe with HTML and CSS (4 Punkte) First Part",
+            title: "2.3. Wireframe with HTML and CSS (4 Punkte) / First Part",
             wireframe: renderWireframe(
                 {
-                    requestText: "Frage: Mit welchem HTML- und CSS-Code kann man diesen Wireframe exakt nachbilden? Schreiben Sie Ihren CSS-Code direkt in die HTML-Datei. Geben Sie Ihren HTML- und CSS-Quellcode zusammen in dieses Textfeld ein:",
+                    requestText: "Mit welchem HTML- und CSS-Code kann man diesen Wireframe exakt nachbilden? Schreiben Sie Ihren CSS-Code direkt in die HTML-Datei. Geben Sie Ihren HTML- und CSS-Quellcode zusammen in dieses Textfeld ein:",
                     imgSrc: `${baseUrl}/img/two/2_3.png`,
                     code: "&lt!DOCTYPE html&gt\n" +
                         "&lthtml lang='en'&gt\n" +
@@ -642,11 +462,19 @@ export const exerciseTwo = {
                 "twoModalClassC",
                 "twoModalWrapper",
                 "twoImgClass",
+                "twoCodeTitleClass",
                 "twoCodeWrapperClass",
+                "twoIframeTitleClass",
+                "../wireframes/u02-t3.html",
+                "twoWireframePagePreviewWrapperClass",
+                "twoWireframePagePreviewClass",
+                "twoWireframePageModalClass_u02-t3",
+                "twoWireframePageModalWrapper",
+                "twoWireframePageClass"
             ),
         },
         {
-            title: "2.3. Wireframe with HTML and CSS (4 Punkte) Second Part",
+            title: "2.3. Wireframe with HTML and CSS (4 Punkte) / Second Part",
             text: [
                 {
                     request: "Was war in der Lösung dieser Aufgabe die größte Schwierigkeit und wie haben Sie diese gelöst?",
