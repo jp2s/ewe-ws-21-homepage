@@ -11,7 +11,8 @@ const renderImagePreview = (imgSrc, classes) =>
         <img src="${imgSrc}" class="${classes.imgPreviewClass}">
         ${renderComponentModal(
             classes,
-        `<img src="${imgSrc}" class="${classes.imgClass}">`
+        `<img src="${imgSrc}" class="${classes.imgClass}">`,
+        classes.modalClass
         )}
     </div>
     `
@@ -47,7 +48,8 @@ const renderWireframePagePreview = (wireframePageSrc, classes) =>
         `<iframe 
                     src="${wireframePageSrc}" 
                     class="${classes.wireframePageClass}">
-                </iframe>`
+                </iframe>`,
+                classes.wireframePageModalClass
             )}
         </div>
     </div>
