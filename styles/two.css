@@ -8,7 +8,7 @@
 }
 .twoExerciseTitle {
     font-size: 70px;
-    font-family: appleGaramond;
+    font-family: appleGaramond, serif;
     color: purple;
 }
 .twoTaskWrapperClass {
@@ -25,7 +25,7 @@
 }
 .twoTaskRequest {
     width: 70%;
-    font-family: appleGaramondBoldItalic;
+    font-family: appleGaramondBoldItalic, serif;
     font-size: 25px;
     border: 4px dotted purple;
     padding: 16px;
@@ -74,7 +74,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: appleGaramondBoldItalic;
+    font-family: appleGaramondBoldItalic, serif;
     font-size: 30px;
     text-align: center;
     color: black;
@@ -90,7 +90,7 @@
 }
 .twoCloseButtonClass {
     cursor: pointer;
-    font-family: appleGaramondBoldItalic;
+    font-family: appleGaramondBoldItalic, serif;
     font-size: 30px;
     text-align: center;
     color: black;
@@ -133,7 +133,7 @@
 }
 /*---------- iframe page preview ----------*/
 .twoIframeTitleClass, .twoCodeTitleClass {
-    font-family: appleGaramondBoldItalic;
+    font-family: appleGaramondBoldItalic, serif;
     font-size: 30px;
     margin-bottom: 15px;
 }
