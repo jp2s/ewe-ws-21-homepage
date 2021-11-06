@@ -1,4 +1,4 @@
-import {baseUrl} from "../../util/util.js";
+import {baseUrl} from "../../util/url.js";
 
 const goToHome = `{window.location.href = '${baseUrl}';}`
 const goToPage = (page) => `{window.location.href = '${baseUrl}/pages/${page}.html';}`
