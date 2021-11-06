@@ -1,127 +1,64 @@
 import {renderComponentModal} from "../Modal/Modal.js";
 
-const renderWireframeRequest = (requestText, requestClass) =>
+const renderWireframeRequest = (requestText, classes) =>
     `
-    <div class="${requestClass}">${requestText}</div>
+    <div class="${classes.requestClass}">${requestText}</div>
     `
 
-const renderImagePreview = (
-    imgSrc,
-    imgPreviewWrapperClass,
-    imgPreviewClass,
-    openButtonClass,
-    closeButtonClass,
-    modalClass,
-    modalWrapper,
-    imgClass
-) =>
+const renderImagePreview = (imgSrc, classes) =>
     `
-    <div class="${imgPreviewWrapperClass}">
-        <img src="${imgSrc}" class="${imgPreviewClass}">
+    <div class="${classes.imgPreviewWrapperClass}">
+        <img src="${imgSrc}" class="${classes.imgPreviewClass}">
         ${renderComponentModal(
-            modalClass, modalWrapper, 
-            openButtonClass, 
-            closeButtonClass, `<img src="${imgSrc}" class="${imgClass}">`
+            classes,
+        `<img src="${imgSrc}" class="${classes.imgClass}">`
         )}
     </div>
     `
 
-const renderCode = (codeData, codeTitleClass, codeWrapperClass) =>
+const renderCode = (code, classes) =>
     `
     <div style="width: 100%; height: 100%;">
-        <div class="${codeTitleClass}">Wireframe Code:</div>
-        <div class="${codeWrapperClass}">
+        <div class="${classes.codeTitleClass}">Wireframe Code:</div>
+        <div class="${classes.codeWrapperClass}">
             <pre>
                 <code>        
-                    ${codeData} 
+                    ${code} 
                 </code>
             </pre>
         </div>
     </div>
     `
 
-// const renderIframe = (iframeSrc, iframeWrapperClass, iframeTitleClass, iframeClass) =>
-//     `
-//     <div class="${iframeWrapperClass}">
-//         <div class="${iframeTitleClass}">Rendered:</div>
-//         <iframe width="100%" height="100%" src="${iframeSrc}" class="${iframeClass}"></iframe>
-//     </div>
-//     `
-
-const renderWireframePagePreview = (
-    iframeTitleClass,
-    wireframePageSrc,
-    wireframePagePreviewWrapperClass,
-    wireframePagePreviewClass,
-    openButtonClass,
-    closeButtonClass,
-    wireframePageModalClass,
-    wireframePageModalWrapper,
-    wireframePageClass
-) =>
+const renderWireframePagePreview = (wireframePageSrc, classes) =>
     `
     <div style="width: 100%; height: 100%;">
-        <div class="${iframeTitleClass}">Rendered Wireframe Code:</div>
-        <div class="${wireframePagePreviewWrapperClass}">
-            <iframe src="${wireframePageSrc}" class="${wireframePagePreviewClass}" frameBorder="0"></iframe>
+        <div class="${classes.iframeTitleClass}">
+            Rendered Wireframe Code:
+        </div>
+        <div class="${classes.wireframePagePreviewWrapperClass}">
+            <iframe 
+                src="${wireframePageSrc}" 
+                class="${classes.wireframePagePreviewClass}" 
+                frameBorder="0">
+            </iframe>
             ${renderComponentModal(
-                wireframePageModalClass, 
-                wireframePageModalWrapper,
-                openButtonClass,
-                closeButtonClass, `<iframe src="${wireframePageSrc}" class="${wireframePageClass}"></iframe>`
+                classes,
+        `<iframe 
+                    src="${wireframePageSrc}" 
+                    class="${classes.wireframePageClass}">
+                </iframe>`
             )}
         </div>
     </div>
     `
 
-export const renderWireframe = (
-    data,
-    wireframeWrapperClass,
-    requestClass,
-    imgPreviewWrapperClass,
-    imgPreviewClass,
-    openButtonClass,
-    closeButtonClass,
-    modalClass,
-    modalWrapper,
-    imgClass,
-    codeTitleClass,
-    codeWrapperClass,
-    iframeTitleClass,
-    wireframePageSrc,
-    wireframePagePreviewWrapperClass,
-    wireframePagePreviewClass,
-    wireframePageModalClass,
-    wireframePageModalWrapper,
-    wireframePageClass
-) =>
+export const renderWireframe = (data, classes,) =>
     `
-    <div class=${wireframeWrapperClass}>
-        ${renderWireframeRequest(
-            data.requestText,
-            requestClass,
-        )}
-        ${renderImagePreview(
-            data.imgSrc,
-            imgPreviewWrapperClass,
-            imgPreviewClass,
-            openButtonClass,
-            closeButtonClass,
-            modalClass,
-            modalWrapper,
-            imgClass,
-        )}
-        ${renderCode(data.code, codeTitleClass, codeWrapperClass)}
-        ${renderWireframePagePreview(
-            iframeTitleClass,
-            wireframePageSrc,
-            wireframePagePreviewWrapperClass,
-            wireframePagePreviewClass,
-            openButtonClass,
-            closeButtonClass,
-            wireframePageModalClass,
-            wireframePageModalWrapper,
-            wireframePageClass
-        )}
+    <div class=${classes.wireframeWrapperClass}>
+        ${renderWireframeRequest(data.requestText, classes)}
+        ${renderImagePreview(data.imgSrc, classes)}
+        ${renderCode(data.code, classes)}
+        ${renderWireframePagePreview(data.wireframePageSrc, classes)}
     </div>
     `

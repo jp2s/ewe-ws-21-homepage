@@ -2,14 +2,18 @@ import {exerciseTwo} from "../db/exerciseTwo.js";
 import {renderComponentExercise} from "../ui/Exercise/Exercise.js";
 
 renderComponentExercise(
-    "cTwo",
-    "exTwo",
-    "exerciseTwo",
+    {
+        query: "cTwo",
+        givenId: "exTwo",
+        givenClass: "exerciseTwo"
+    },
     exerciseTwo,
-    "twoExerciseWrapperClass",
-    "twoExerciseTitle",
-    "twoTaskWrapperClass",
-    "twoTaskTitle",
-    "twoTaskRequest",
-    "twoTaskReply"
+    {
+        exerciseWrapperClass: "twoExerciseWrapperClass",
+        exerciseClass: "twoExerciseTitle",
+        taskWrapperClass: "twoTaskWrapperClass",
+        titleClass: "twoTaskTitle",
+        requestClass: "twoTaskRequest",
+        replyClass: "twoTaskReply"
+    }
 )

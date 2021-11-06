@@ -80,6 +80,7 @@ export const exerciseOne = {
                 {
                     requestText: "Mit welchem HTML-Code (ohne CSS, nur mit HTML-Tags) kann man diesen Wireframe exakt nachbilden?",
                     imgSrc: "https://kaul.inf.h-brs.de/we/assets/img/wireframe01.jpg",
+                    wireframePageSrc: "../wireframes/u01.html",
                     code:
                         "&lt!DOCTYPE html&gt\n" +
                         "&lthtml lang=\"en\"&gt\n" +
@@ -143,24 +144,25 @@ export const exerciseOne = {
                         "&lt/body&gt\n" +
                         "&lt/html&gt",
                 },
-                "oneWireframeWrapperClass",
-                "oneTaskRequest",
-                "oneImgPreviewWrapperClass",
-                "oneImgPreviewClass",
-                "oneOpenButtonClass",
-                "oneCloseButtonClass",
-                "oneModalClass",
-                "oneModalWrapper",
-                "oneImgClass",
-                "oneCodeTitleClass",
-                "oneCodeWrapperClass",
-                "oneIframeTitleClass",
-                "../wireframes/u01.html",
-                "oneWireframePagePreviewWrapperClass",
-                "oneWireframePagePreviewClass",
-                "oneWireframePageModalClass",
-                "oneWireframePageModalWrapper",
-                "oneWireframePageClass"
+                {
+                    wireframeWrapperClass: "oneWireframeWrapperClass",
+                    requestClass: "oneTaskRequest",
+                    imgPreviewWrapperClass: "oneImgPreviewWrapperClass",
+                    imgPreviewClass: "oneImgPreviewClass",
+                    openButtonClass: "oneOpenButtonClass",
+                    closeButtonClass: "oneCloseButtonClass",
+                    modalClass: "oneModalClass",
+                    modalWrapper: "oneModalWrapper",
+                    imgClass: "oneImgClass",
+                    codeTitleClass: "oneCodeTitleClass",
+                    codeWrapperClass: "oneCodeWrapperClass",
+                    iframeTitleClass: "oneIframeTitleClass",
+                    wireframePagePreviewWrapperClass: "oneWireframePagePreviewWrapperClass",
+                    wireframePagePreviewClass: "oneWireframePagePreviewClass",
+                    wireframePageModalClass: "oneWireframePageModalClass",
+                    wireframePageModalWrapper: "oneWireframePageModalWrapper",
+                    wireframePageClass: "oneWireframePageClass",
+                }
 
             ),
         },

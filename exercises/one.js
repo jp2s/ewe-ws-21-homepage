@@ -2,14 +2,18 @@ import {exerciseOne} from "../db/exerciseOne.js";
 import {renderComponentExercise} from "../ui/Exercise/Exercise.js";
 
 renderComponentExercise(
-    "cOne",
-    "exOne",
-    "exerciseOne",
+    {
+        query: "cOne",
+        givenId: "exOne",
+        givenClass: "exerciseOne"
+    },
     exerciseOne,
-    "oneExerciseWrapperClass",
-    "oneExerciseTitle",
-    "oneTaskWrapperClass",
-    "oneTaskTitle",
-    "oneTaskRequest",
-    "oneTaskReply"
+    {
+        exerciseWrapperClass: "oneExerciseWrapperClass",
+        exerciseClass: "oneExerciseTitle",
+        taskWrapperClass: "oneTaskWrapperClass",
+        titleClass: "oneTaskTitle",
+        requestClass: "oneTaskRequest",
+        replyClass: "oneTaskReply"
+    },
 )

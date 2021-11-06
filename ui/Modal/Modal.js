@@ -1,28 +1,32 @@
-const toggleModal = (modalClass, show) =>
-    show ? `document.getElementsByClassName('${modalClass}')[0].style.removeProperty('display');`
-        : `document.getElementsByClassName('${modalClass}')[0].style.setProperty('display', 'none');`
+const toggleModal = (classes, show) =>
+    show ? `document.getElementsByClassName('${classes.modalClass}')[0].style.removeProperty('display');`
+        : `document.getElementsByClassName('${classes.modalClass}')[0].style.setProperty('display', 'none');`
 
-const renderCloseButton = (modalClass, closeButtonClass) =>
+const renderCloseButton = (classes) =>
     `
-    <div class="${closeButtonClass}" onclick="${toggleModal(modalClass,false)}">
-        close
+    <div 
+        class="${classes.closeButtonClass}" 
+        onclick="${toggleModal(classes,false)}">
+            close
     </div>
     `
 
-const renderModal = (modalClass, modalWrapper, closeButtonClass, content) =>
+const renderModal = (classes, content) =>
     `
-    <div class="${modalClass}" style="display: none;">
-        <div class="${modalWrapper}">
+    <div class="${classes.modalClass}" style="display: none;">
+        <div class="${classes.modalWrapper}">
             ${content}
-            ${renderCloseButton(modalClass, closeButtonClass)}
+            ${renderCloseButton(classes)}
         </div>
     </div>
     `
 
-export const renderComponentModal = (modalClass, modalWrapper, openButtonClass, closeButtonClass, content) =>
+export const renderComponentModal = (classes, content) =>
     `
-    <div class="${openButtonClass}" onclick="${toggleModal(modalClass,true)}">
-        click to expand
+    <div 
+        class="${classes.openButtonClass}" 
+        onclick="${toggleModal(classes,true)}">
+            click to expand
     </div>
-    ${renderModal(modalClass, modalWrapper, closeButtonClass, content)}
+    ${renderModal(classes, content)}
     `

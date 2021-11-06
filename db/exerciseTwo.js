@@ -1,4 +1,4 @@
-import {baseUrl} from "../util/util.js";
+import {baseUrl} from "../util/url.js";
 import {renderWireframe} from "../ui/Wireframe/Wireframe.js";
 
 export const exerciseTwo = {
@@ -41,6 +41,7 @@ export const exerciseTwo = {
                 {
                     requestText: "Schauen Sie sich folgendes Video an und bauen Sie das dynamische Verhalten exakt nach (nur mit HTML und CSS, ohne JavaScript):",
                     imgSrc: `${baseUrl}/img/two/2_2a.png`,
+                    wireframePageSrc: "../wireframes/u02-t2-1.html",
                     code: "&lt!DOCTYPE html&gt\n" +
                         "&lthtml lang='en'&gt\n" +
                         "&lthead&gt\n" +
@@ -180,24 +181,25 @@ export const exerciseTwo = {
                         "&lt/body&gt\n" +
                         "&lt/html&gt",
                 },
-                "twoWireframeWrapperClass",
-                "twoTaskRequest",
-                "twoImgPreviewWrapperClass",
-                "twoImgPreviewClass",
-                "twoOpenButtonClass",
-                "twoCloseButtonClass",
-                "twoModalClassA",
-                "twoModalWrapper",
-                "twoImgClass",
-                "twoCodeTitleClass",
-                "twoCodeWrapperClass",
-                "twoIframeTitleClass",
-                "../wireframes/u02-t2-1.html",
-                "twoWireframePagePreviewWrapperClass",
-                "twoWireframePagePreviewClass",
-                "twoWireframePageModalClass_u02-t2-1",
-                "twoWireframePageModalWrapper",
-                "twoWireframePageClass"
+                {
+                    wireframeWrapperClass: "twoWireframeWrapperClass",
+                    requestClass: "twoTaskRequest",
+                    imgPreviewWrapperClass: "twoImgPreviewWrapperClass",
+                    imgPreviewClass: "twoImgPreviewClass",
+                    openButtonClass: "twoOpenButtonClass",
+                    closeButtonClass: "twoCloseButtonClass",
+                    modalClass: "twoModalClassA",
+                    modalWrapper: "twoModalWrapper",
+                    imgClass: "twoImgClass",
+                    codeTitleClass: "twoCodeTitleClass",
+                    codeWrapperClass: "twoCodeWrapperClass",
+                    iframeTitleClass: "twoIframeTitleClass",
+                    wireframePagePreviewWrapperClass: "twoWireframePagePreviewWrapperClass",
+                    wireframePagePreviewClass: "twoWireframePagePreviewClass",
+                    wireframePageModalClass: "twoWireframePageModalClass_u02-t2-1",
+                    wireframePageModalWrapper: "twoWireframePageModalWrapper",
+                    wireframePageClass: "twoWireframePageClass"
+                }
             ),
         },
         {
@@ -206,6 +208,7 @@ export const exerciseTwo = {
                 {
                     requestText: "Schauen Sie sich folgendes Video an und bauen Sie das dynamische Verhalten exakt nach (nur mit HTML und CSS, ohne JavaScript):",
                     imgSrc: `${baseUrl}/img/two/2_2b.png`,
+                    wireframePageSrc: "../wireframes/u02-t2-2.html",
                     code: "&lt!DOCTYPE html&gt\n" +
                         "&lthtml lang='en'&gt\n" +
                         "&lthead&gt\n" +
@@ -261,24 +264,25 @@ export const exerciseTwo = {
                         "&lt/body&gt\n" +
                         "&lt/html&gt",
                 },
-                "twoWireframeWrapperClass",
-                "twoTaskRequest",
-                "twoImgPreviewWrapperClass",
-                "twoImgPreviewClass",
-                "twoOpenButtonClass",
-                "twoCloseButtonClass",
-                "twoModalClassB",
-                "twoModalWrapper",
-                "twoImgClass",
-                "twoCodeTitleClass",
-                "twoCodeWrapperClass",
-                "twoIframeTitleClass",
-                "../wireframes/u02-t2-2.html",
-                "twoWireframePagePreviewWrapperClass",
-                "twoWireframePagePreviewClass",
-                "twoWireframePageModalClass_u02-t2-2",
-                "twoWireframePageModalWrapper",
-                "twoWireframePageClass"
+                {
+                    wireframeWrapperClass: "twoWireframeWrapperClass",
+                    requestClass: "twoTaskRequest",
+                    imgPreviewWrapperClass: "twoImgPreviewWrapperClass",
+                    imgPreviewClass: "twoImgPreviewClass",
+                    openButtonClass: "twoOpenButtonClass",
+                    closeButtonClass: "twoCloseButtonClass",
+                    modalClass: "twoModalClassB",
+                    modalWrapper: "twoModalWrapper",
+                    imgClass: "twoImgClass",
+                    codeTitleClass: "twoCodeTitleClass",
+                    codeWrapperClass: "twoCodeWrapperClass",
+                    iframeTitleClass: "twoIframeTitleClass",
+                    wireframePagePreviewWrapperClass: "twoWireframePagePreviewWrapperClass",
+                    wireframePagePreviewClass: "twoWireframePagePreviewClass",
+                    wireframePageModalClass: "twoWireframePageModalClass_u02-t2-2",
+                    wireframePageModalWrapper: "twoWireframePageModalWrapper",
+                    wireframePageClass: "twoWireframePageClass"
+                }
             ),
         },
         {
@@ -287,6 +291,7 @@ export const exerciseTwo = {
                 {
                     requestText: "Mit welchem HTML- und CSS-Code kann man diesen Wireframe exakt nachbilden? Schreiben Sie Ihren CSS-Code direkt in die HTML-Datei. Geben Sie Ihren HTML- und CSS-Quellcode zusammen in dieses Textfeld ein:",
                     imgSrc: `${baseUrl}/img/two/2_3.png`,
+                    wireframePageSrc: "../wireframes/u02-t3.html",
                     code: "&lt!DOCTYPE html&gt\n" +
                         "&lthtml lang='en'&gt\n" +
                         "&lthead&gt\n" +
@@ -453,24 +458,25 @@ export const exerciseTwo = {
                         "&lt/body&gt\n" +
                         "&lt/html&gt",
                 },
-                "twoWireframeWrapperClass",
-                "twoTaskRequest",
-                "twoImgPreviewWrapperClass",
-                "twoImgPreviewClass",
-                "twoOpenButtonClass",
-                "twoCloseButtonClass",
-                "twoModalClassC",
-                "twoModalWrapper",
-                "twoImgClass",
-                "twoCodeTitleClass",
-                "twoCodeWrapperClass",
-                "twoIframeTitleClass",
-                "../wireframes/u02-t3.html",
-                "twoWireframePagePreviewWrapperClass",
-                "twoWireframePagePreviewClass",
-                "twoWireframePageModalClass_u02-t3",
-                "twoWireframePageModalWrapper",
-                "twoWireframePageClass"
+                {
+                    wireframeWrapperClass: "twoWireframeWrapperClass",
+                    requestClass: "twoTaskRequest",
+                    imgPreviewWrapperClass: "twoImgPreviewWrapperClass",
+                    imgPreviewClass: "twoImgPreviewClass",
+                    openButtonClass: "twoOpenButtonClass",
+                    closeButtonClass: "twoCloseButtonClass",
+                    modalClass: "twoModalClassC",
+                    modalWrapper: "twoModalWrapper",
+                    imgClass: "twoImgClass",
+                    codeTitleClass: "twoCodeTitleClass",
+                    codeWrapperClass: "twoCodeWrapperClass",
+                    iframeTitleClass: "twoIframeTitleClass",
+                    wireframePagePreviewWrapperClass: "twoWireframePagePreviewWrapperClass",
+                    wireframePagePreviewClass: "twoWireframePagePreviewClass",
+                    wireframePageModalClass: "twoWireframePageModalClass_u02-t3",
+                    wireframePageModalWrapper: "twoWireframePageModalWrapper",
+                    wireframePageClass: "twoWireframePageClass"
+                }
             ),
         },
         {
