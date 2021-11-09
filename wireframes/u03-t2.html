@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lerneinheit 3: CSS 2. Teil Responsive Web Design</title>
+    <style>
+        #content {
+            width: 95vw;
+            height: 95vh;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-rows:
+                    [firstR] 10%
+                    [secondR] 10%
+                    [thirdR] 65%
+                    [fourthR] 10%
+                    [endR];
+            grid-template-columns:
+                    [firstC] 95%
+                    [endC];
+        }
+        #red {
+            background-color: #ff0000;
+            grid-row-start: firstR;
+            grid-row-end: secondR;
+            grid-column-start: firstC;
+            grid-column-end: endC;
+        }
+        #green {
+            background-color: #00ff00;
+            grid-row-start: secondR;
+            grid-row-end: thirdR;
+            grid-column-start: firstC;
+            grid-column-end: endC;
+        }
+        #blue {
+            background-color: #0000ff;
+            grid-row-start: thirdR;
+            grid-row-end: fourthR;
+            grid-column-start: firstC;
+            grid-column-end: endC;
+        }
+        #magenta {
+            background-color: #ff00ff;
+            grid-row-start: fourthR;
+            grid-row-end: endR;
+            grid-column-start: firstC;
+            grid-column-end: endC;
+        }
+
+        @media screen and (min-width: 300px) {
+            #content {
+                width: 95vw;
+                height: 95vh;
+                display: grid;
+                grid-template-rows:
+                    [firstR] 15%
+                    [secondR] 65%
+                    [thirdR] 15%
+                    [endR];
+                grid-template-columns:
+                    [firstC] 30%
+                    [secondC] 65%
+                    [endC];
+            }
+            #red {
+                background-color: #ff0000;
+                grid-row-start: firstR;
+                grid-row-end: secondR;
+                grid-column-start: firstC;
+                grid-column-end: endC;
+            }
+            #green {
+                background-color: #00ff00;
+                grid-row-start: secondR;
+                grid-row-end: thirdR;
+                grid-column-start: firstC;
+                grid-column-end: secondC;
+            }
+            #blue {
+                background-color: #0000ff;
+                grid-row-start: secondR;
+                grid-row-end: thirdR;
+                grid-column-start: secondC;
+                grid-column-end: endC;
+            }
+            #magenta {
+                background-color: #ff00ff;
+                grid-row-start: thirdR;
+                grid-row-end: endR;
+                grid-column-start: firstC;
+                grid-column-end: endC;
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            #content {
+                width: 95vw;
+                height: 95vh;
+                display: grid;
+                grid-template-rows:
+                    [firstR] 20%
+                    [secondR] 75%
+                    [endR];
+                grid-template-columns:
+                    [firstC] 15%
+                    [secondC] 65%
+                    [thirdC] 15%
+                    [endC];
+            }
+            #red {
+                background-color: #ff0000;
+                grid-row-start: firstR;
+                grid-row-end: secondR;
+                grid-column-start: firstC;
+                grid-column-end: endC;
+            }
+            #green {
+                background-color: #00ff00;
+                grid-row-start: secondR;
+                grid-row-end: endR;
+                grid-column-start: firstC;
+                grid-column-end: secondC;
+            }
+            #blue {
+                background-color: #0000ff;
+                grid-row-start: secondR;
+                grid-row-end: endR;
+                grid-column-start: secondC;
+                grid-column-end: thirdC;
+            }
+            #magenta {
+                background-color: #ff00ff;
+                grid-row-start: secondR;
+                grid-row-end: endR;
+                grid-column-start: thirdC;
+                grid-column-end: endC;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <div id="red" class="item">&nbsp;</div>
+    <div id="green" class="item">&nbsp;</div>
+    <div id="blue" class="item">&nbsp;</div>
+    <div id="magenta" class="item">&nbsp;</div>
+</div>
+</body>
+</html>

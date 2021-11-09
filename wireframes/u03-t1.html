@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lerneinheit 3: CSS 2. Teil Responsive Web Design</title>
+    <style>
+        #content {
+            display: flex;
+            flex-direction: row;
+            justify-content: stretch;
+            align-items: center;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+        .item {
+            height: 100%;
+        }
+        #red {
+            background-color: #ff0000;
+            flex-basis: calc(100% - 10px);
+            height: calc(40vh - 20px);
+        }
+        #green {
+            background-color: #00ff00;
+            flex-basis: calc(20% - 10px);
+            height: calc(60vh - 20px);
+        }
+        #blue {
+            background-color: #0000ff;
+            flex-basis: calc(60% - 10px);
+            height: calc(60vh - 20px);
+        }
+        #magenta {
+            background-color: #ff00ff;
+            flex-basis: calc(20% - 10px);
+            height: calc(60vh - 20px);
+        }
+        @media screen and (max-width: 600px) {
+            #red {
+                background-color: #ff0000;
+                flex-basis: calc(100% - 10px);
+                height: calc(40vh - 20px);
+            }
+            #green {
+                background-color: #00ff00;
+                flex-basis: calc(40% - 10px);
+                height: calc(100vh - 20px);
+            }
+            #blue {
+                background-color: #0000ff;
+                flex-basis: calc(60% - 10px);
+                height: calc(100vh - 20px);
+            }
+            #magenta {
+                background-color: #ff00ff;
+                flex-basis: calc(100% - 10px);
+                height: calc(20vh - 20px);
+            }
+        }
+        @media screen and (max-width: 300px) {
+            #red {
+                background-color: #ff0000;
+                flex-basis: calc(100% - 10px);
+                height: calc(25vh - 20px);
+            }
+            #green {
+                background-color: #00ff00;
+                flex-basis: calc(100% - 10px);
+                height: calc(25vh - 20px);
+            }
+            #blue {
+                background-color: #0000ff;
+                flex-basis: calc(100% - 10px);
+                height: calc(200vh - 20px);
+            }
+            #magenta {
+                background-color: #ff00ff;
+                flex-basis: calc(100% - 10px);
+                height: calc(15vh - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <div id="red" class="item">&nbsp;</div>
+    <div id="green" class="item">&nbsp;</div>
+    <div id="blue" class="item">&nbsp;</div>
+    <div id="magenta" class="item">&nbsp;</div>
+</div>
+</body>
+</html>

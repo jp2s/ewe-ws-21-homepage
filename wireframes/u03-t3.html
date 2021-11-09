@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lerneinheit 3: CSS 2. Teil Responsive Web Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial;
+            color: white;
+            margin: 0px;
+            font-size: 14px;
+            text-align: center;
+        }
+        #page {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            align-items: center;
+            grid-template-rows:
+                    [header] 10%
+                    [mainContent] 70%
+                    [footer] 20%
+                    [endRow];
+            grid-template-columns:
+                    [startColumn] 100%
+                    [endColumn];
+        }
+
+        #header {
+            width: 100%;
+            height: 100%;
+            background-color: #363636;
+            grid-row-start: header;
+            grid-row-end: mainContent;
+            grid-column-start: startColumn;
+            grid-column-end: endColumn;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-template-rows:
+                    [startRow] 100%
+                    [endRow];
+            grid-template-columns:
+                    [spaceLeft] 30%
+                    [header1] 10%
+                    [header2] 10%
+                    [header3] 10%
+                    [header4] 10%
+                    [spaceRight] 30%
+                    [endColumn];
+        }
+        .navItem {
+            text-align: center;
+            border-radius: 4px;
+            padding: 8px;
+        }
+        .navItem:hover {
+            cursor: pointer;
+            text-align: center;
+            background-color: white;
+            color: black;
+            transition-duration: 0.3s;
+        }
+        #nav1 {
+            grid-row-start: startRow;
+            grid-row-end: endRow;
+            grid-column-start: header1;
+            grid-column-end: header2;
+        }
+        #nav2 {
+            grid-row-start: startRow;
+            grid-row-end: endRow;
+            grid-column-start: header2;
+            grid-column-end: header3;
+        }
+        #nav3{
+            grid-row-start: startRow;
+            grid-row-end: endRow;
+            grid-column-start: header3;
+            grid-column-end: header4;
+        }
+        #nav4 {
+            ggrid-row-start: startRow;
+            grid-row-end: endRow;
+            grid-column-start: header4;
+            grid-column-end: spaceRight;
+        }
+
+        #mainContent {
+            width: 100%;
+            height: 100%;
+            background-color: #ebeae6;
+            grid-row-start: mainContent;
+            grid-row-end: footer;
+            grid-column-start: startColumn;
+            grid-column-end: endColumn;
+            display: grid;
+            align-items: center;
+            grid-template-rows:
+                    [title] 17%
+                    [content] 78%
+                    [imageEnd] 5%
+                    [endRow];
+            grid-template-columns:
+                    [startColumn] 10%
+                    [imageStart] 28%
+                    [imageSpacing] 2%
+                    [description] 60%
+                    [endColumn];
+        }
+        #title {
+            color: black;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            grid-row-start: title;
+            grid-row-end: content;
+            grid-column-start: startColumn;
+            grid-column-end: endColumn;
+        }
+        #imageWrapper {
+            width: 100%;
+            height: 100%;
+            grid-row-start: content;
+            grid-row-end: imageEnd;
+            grid-column-start: imageStart;
+            grid-column-end: imageSpacing;
+        }
+        #image {
+            border: 1px solid black;
+            border-radius: 4px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        #description {
+            width: 100%;
+            height: 100%;
+            grid-row-start: content;
+            grid-row-end: imageEnd;
+            grid-column-start: description;
+            grid-column-end: endColumn;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-template-rows:
+                    [spaceTop] 10%
+                    [desc1] 15%
+                    [desc2] 15%
+                    [desc3] 15%
+                    [desc4] 15%
+                    [spaceBottom] 30%
+                    [endRow];
+            grid-template-columns:
+                    [startColumn] 100%
+                    [endColumn];
+        }
+        .descriptionItem {
+            font-size: 21px;
+            color: black;
+        }
+        #description1 {
+            grid-row-start: desc1;
+            grid-row-end: desc2;
+            grid-column-start: startColumn;
+            grid-column-end: endColumn;
+        }
+        #description2 {
+            grid-row-start: desc2;
+            grid-row-end: desc3;
+            grid-column-start: startColumn;
+            grid-column-end: endColumn;
+        }
+        #description3 {
+            grid-row-start: desc3;
+            grid-row-end: desc4;
+            grid-column-start: startColumn;
+            grid-column-end: endColumn;
+        }
+        #description4 {
+            grid-row-start: desc4;
+            grid-row-end: spaceBottom;
+            grid-column-start: startColumn;
+            grid-column-end: endColumn;
+        }
+        #orderButton {
+            width: 200px;
+            border-radius: 4px;
+        }
+
+        #footer {
+            width: 100%;
+            height: 100%;
+            background-color: #011826;
+            grid-row-start: footer;
+            grid-row-end: endRow;
+            grid-column-start: startColumn;
+            grid-column-end: endColumn;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-template-rows:
+                    [spaceTop] 20%
+                    [text] 35%
+                    [button] 35%
+                    [spaceBottom] 10%
+                    [endRow];
+            grid-template-columns:
+                    [startColumn] 100%
+                    [endColumn];
+        }
+        #footerText {
+            font-size: 16px;
+            grid-row-start: text;
+            grid-row-end: button;
+            grid-column-start: startColumn;
+            grid-column-end: endColumn;
+        }
+        #footerButton {
+            grid-row-start: button;
+            grid-row-end: spaceBottom;
+            grid-column-start: startColumn;
+            grid-column-end: endColumn;
+            width: 500px;
+            border-radius: 8px;
+        }
+
+        .styledButton {
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+            background-color: #f88e37;
+            font-size: 14px;
+            color: white;
+            padding: 8px;
+        }
+        .styledButton:hover {
+            cursor: pointer;
+            text-align: center;
+            background-color: #af6426;
+            transition-duration: 0.3s;
+        }
+
+        @media screen and (max-width: 900px) {
+            #header {
+                    [startRow] 100%
+                    [endRow];
+                grid-template-columns:
+                    [spaceLeft] 10%
+                    [header1] 20%
+                    [header2] 20%
+                    [header3] 20%
+                    [header4] 20%
+                    [spaceRight] 10%
+                    [endColumn];
+            }
+
+            #mainContent {
+                grid-template-rows:
+                    [title] 20%
+                    [content] 58%
+                    [imageEnd] 17%
+                    [endRow];
+                grid-template-columns:
+                    [startColumn] 10%
+                    [imageStart] 13%
+                    [imageSpacing] 2%
+                    [description] 75%
+                    [endColumn];
+            }
+            #title {
+                font-size: 20px;
+            }
+            #description {
+                grid-row-start: content;
+                grid-row-end: imageEnd;
+                grid-column-start: description;
+                grid-column-end: endColumn;
+                grid-template-rows:
+                    [spaceTop] 10%
+                    [desc1] 20%
+                    [desc2] 20%
+                    [desc3] 20%
+                    [desc4] 20%
+                    [spaceBottom] 10%
+                    [endRow];
+                grid-template-columns:
+                    [startColumn] 100%
+                    [endColumn];
+            }
+
+            /*#footerButton {*/
+            /*    width: 300px;*/
+            /*    border-radius: 8px;*/
+            /*}*/
+
+            /*.styledButton {*/
+            /*    font-size: 14px;*/
+            /*    padding: 4px;*/
+            /*}*/
+        }
+        @media screen and (max-width: 600px) {
+            #mainContent {
+                grid-template-rows:
+                    [title] 20%
+                    [content] 80%
+                    [endRow];
+                grid-template-columns:
+                    [startColumn] 100%
+                    [endColumn];
+            }
+            #description {
+                grid-row-start: content;
+                grid-row-end: endRow;
+                grid-column-start: startColumn;
+                grid-column-end: endColumn;
+                grid-template-rows:
+                    [spaceTop] 10%
+                    [desc1] 20%
+                    [desc2] 20%
+                    [desc3] 20%
+                    [desc4] 20%
+                    [spaceBottom] 10%
+                    [endRow];
+                grid-template-columns:
+                    [spaceLeft] 20%
+                    [content] 60%
+                    [spaceRight] 20%
+                    [endColumn];
+            }
+            #description1 {
+                grid-row-start: desc1;
+                grid-row-end: desc2;
+                grid-column-start: content;
+                grid-column-end: spaceRight;
+            }
+            #description2 {
+                grid-row-start: desc2;
+                grid-row-end: desc3;
+                grid-column-start: content;
+                grid-column-end: spaceRight;
+            }
+            #description3 {
+                grid-row-start: desc3;
+                grid-row-end: desc4;
+                grid-column-start: content;
+                grid-column-end: spaceRight;
+            }
+            #description4 {
+                grid-row-start: desc4;
+                grid-row-end: spaceBottom;
+                grid-column-start: content;
+                grid-column-end: spaceRight;
+            }
+            #image {
+                display: none;
+            }
+
+            #footer {
+                grid-row-start: footer;
+                grid-row-end: endRow;
+                grid-column-start: startColumn;
+                grid-column-end: endColumn;
+                grid-template-rows:
+                    [spaceTop] 10%
+                    [text] 40%
+                    [button] 40%
+                    [spaceBottom] 10%
+                    [endRow];
+                grid-template-columns:
+                    [startColumn] 100%
+                    [endColumn];
+            }
+            #footerText {
+                /*font-size: 16px;*/
+                grid-row-start: text;
+                grid-row-end: button;
+                grid-column-start: startColumn;
+                grid-column-end: endColumn;
+            }
+            #footerButton {
+                grid-row-start: button;
+                grid-row-end: spaceBottom;
+                grid-column-start: startColumn;
+                grid-column-end: endColumn;
+                width: 300px;
+                border-radius: 8px;
+            }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <div id="header">
+            <div id="nav1" class="navItem">The book series</div>
+            <div id="nav2" class="navItem">Testimonials</div>
+            <div id="nav3" class="navItem">The Author</div>
+            <div id="nav4" class="navItem">Free resources</div>
+        </div>
+
+        <div id="mainContent">
+            <div id="title"><code>You don't know JavaScript</code></div>
+            <div id="imageWrapper">
+                <img id="image" src="https://kaul.inf.h-brs.de/we/assets/img/landing-img.png">
+            </div>
+            <div id="description">
+                <div id="description1" class="descriptionItem">Don't just drift through JavaScript.</div>
+                <div id="description2" class="descriptionItem">Understand how JavaScript works</div>
+                <div id="description3" class="descriptionItem">Start your Journey through the bumpy side of JavaScript</div>
+                <div id="description4" class="descriptionItem">
+                    <div id="orderButton" class="styledButton">ORDER YOUR COPY NOW</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="footerText">The first ebook in the book series is absolutely free.</div>
+            <div id="footerButton" class="styledButton">FIND OUT MORE ABOUT THIS OFFER</div>
+        </div>
+    </div>
+</body>
+</html>
