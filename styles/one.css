@@ -166,6 +166,46 @@
     width: 80vw;
     height: 80vh;
 }
+/*---------- toc ----------*/
+.oneTocWrapperClass {
+    /*border-top: 4px dotted teal;*/
+    /*border-bottom: 4px dotted teal;*/
+    /*padding-top: 16px;*/
+    /*padding-bottom: 24px;*/
+    border-left: 4px dotted #FFC4F8;
+    padding-left: 32px;
+}
+.oneTocListWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+.oneTocDescription:before {
+    content: "::";
+    color: teal;
+    margin-right: 8px;
+}
+.oneTocDescription {
+    font-size: 20px;
+    margin-left: 64px;
+}
+.oneTocContentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+.oneTocTitle {
+    font-family: appleGaramondBoldItalic, serif;
+    font-size: 35px;
+}
+.oneTocTitle:hover {
+    color: #FFC4F8;
+    transition-duration: 0.3s;
+}
 /*---------- other ----------*/
 .oneCodeWrapperClass {
     border: 4px solid teal;

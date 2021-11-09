@@ -178,6 +178,46 @@
     width: 80vw;
     height: 80vh;
 }
+/*---------- toc ----------*/
+.twoTocWrapperClass {
+    /*border-top: 4px dotted purple;*/
+    /*border-bottom: 4px dotted purple;*/
+    /*padding-top: 16px;*/
+    /*padding-bottom: 24px;*/
+    border-left: 4px dotted gold;
+    padding-left: 32px;
+}
+.twoTocListWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+.twoTocDescription:before {
+    content: "::";
+    color: purple;
+    margin-right: 8px;
+}
+.twoTocDescription {
+    font-size: 20px;
+    margin-left: 64px;
+}
+.twoTocContentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+.twoTocTitle {
+    font-family: appleGaramondBoldItalic, serif;
+    font-size: 35px;
+}
+.twoTocTitle:hover {
+    color: gold;
+    transition-duration: 0.3s;
+}
 /*---------- other ----------*/
 .twoCodeWrapperClass {
     border: 4px solid purple;
