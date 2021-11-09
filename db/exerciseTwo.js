@@ -8,7 +8,6 @@ export const tocTwo = {
             descriptions: [
                 "CSS Selectors",
                 "CSS Colors",
-                "Broken links",
             ]
         },
         {
