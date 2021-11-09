@@ -6,8 +6,11 @@ export const tocTwo = {
         {
             title: "CSS Selektoren und CSS Farben",
             descriptions: [
-                "CSS Selectors",
-                "CSS Colors",
+                "Selectors",
+                "Specificity",
+                "Colors",
+                "Color Conversion",
+                "Hex, RGB, RGBA, HSL"
             ]
         },
         {
