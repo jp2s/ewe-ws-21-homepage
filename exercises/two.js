@@ -1,4 +1,4 @@
-import {exerciseTwo} from "../db/exerciseTwo.js";
+import {exerciseTwo, tocTwo} from "../db/exerciseTwo.js";
 import {renderComponentExercise} from "../ui/Exercise/Exercise.js";
 
 renderComponentExercise(
@@ -14,6 +14,12 @@ renderComponentExercise(
         taskWrapperClass: "twoTaskWrapperClass",
         titleClass: "twoTaskTitle",
         requestClass: "twoTaskRequest",
-        replyClass: "twoTaskReply"
-    }
+        replyClass: "twoTaskReply",
+        tocWrapperClass: "twoTocWrapperClass",
+        tocListWrapper: "twoTocListWrapper",
+        tocDescription: "twoTocDescription",
+        tocContentWrapper: "twoTocContentWrapper",
+        tocTitle: "twoTocTitle",
+    },
+    tocTwo
 )
