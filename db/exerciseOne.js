@@ -1,5 +1,33 @@
 import {renderWireframe} from "../ui/Wireframe/Wireframe.js";
 
+export const tocOne = {
+    content: [
+        {
+            title: "Fachliche Argumentation über Erfolgsprinzipien des WWW",
+            descriptions: [
+                "Arguments against the WWW",
+                "Arguments in favor of the WWW",
+                "Broken links",
+            ]
+        },
+        {
+            title: "HTTP",
+            descriptions: [
+                "HTTP Status Codes 200, 301, 400 and 403",
+                "HTTP Options",
+                "Caching of HTTP Requests",
+            ]
+        },
+        {
+            title: "HTML Wireframe",
+            descriptions: [
+                "Wireframe without CSS",
+                "Wireframe without JavaScript",
+            ]
+        },
+    ],
+}
+
 export const exerciseOne = {
     title: "Lerneinheit 1: HTTP, URI und HTML",
     tasks: [

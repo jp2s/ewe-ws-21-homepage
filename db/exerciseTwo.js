@@ -1,6 +1,39 @@
 import {baseUrl} from "../util/url.js";
 import {renderWireframe} from "../ui/Wireframe/Wireframe.js";
 
+export const tocTwo = {
+    content: [
+        {
+            title: "CSS Selektoren und CSS Farben",
+            descriptions: [
+                "CSS Selectors",
+                "CSS Colors",
+                "Broken links",
+            ]
+        },
+        {
+            title: "CSS Positionierung",
+            descriptions: [
+                "Wireframe with CSS",
+                "Positioning with CSS",
+                "Sticky Headlines",
+                "Showing and hiding content",
+            ]
+        },
+        {
+            title: "Wireframe with HTML and CSS",
+            descriptions: [
+                "Wireframe with CSS",
+                "Implementing a Survey Form",
+                "Text Input",
+                "Dropdown menus",
+                "Radio Buttons",
+                "Checkboxes",
+            ]
+        },
+    ],
+}
+
 export const exerciseTwo = {
     title: "Lerneinheit 2: CSS 1. Teil",
     tasks: [
