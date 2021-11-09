@@ -1,3 +1,5 @@
+import {renderTableOfContents} from "../TableOfContents/TableOfContents.js";
+
 const renderRequestReply = (requestText, replyText, classes) =>
     `
     <div class="${classes.requestClass}">${requestText}</div>
@@ -13,19 +15,20 @@ const renderTask = (data, classes) =>
     </div>
     `
 
-const renderExercise = (data, classes) =>
+const renderExercise = (data, classes, tocData) =>
     `
         <div class="${classes.exerciseWrapperClass}">
             <div class="${classes.exerciseClass}">${data.title}</div>
+            ${renderTableOfContents(tocData, classes)}
             ${data.tasks.map(task => renderTask(task, classes)).join('')}
         </div>
     `
 
-export const renderComponentExercise = (swapData, data, classes) => {
+export const renderComponentExercise = (swapData, data, classes, tocData) => {
     const current = document.querySelector(`script#${swapData.query}`);
     const replacement = document.createElement("div");
     replacement.setAttribute("id", swapData.givenId);
     replacement.setAttribute("class", swapData.givenClass);
-    replacement.innerHTML = renderExercise(data, classes);
+    replacement.innerHTML = renderExercise(data, classes, tocData);
     current.parentNode.replaceChild(replacement, current);
 }
