@@ -1,7 +1,4 @@
-import {baseUrl} from "../../util/url.js";
-
-const goToHome = `{window.location.href = '${baseUrl}';}`
-const goToPage = (page) => `{window.location.href = '${baseUrl}/pages/${page}.html';}`
+import {goToHome, goToPage} from "../../util/redirect.js";
 
 const renderHeader = () =>
     `
