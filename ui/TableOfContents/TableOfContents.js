@@ -1,7 +1,12 @@
-const renderContent = (content, classes) =>
+import {goToTask} from "../../util/redirect.js";
+
+const renderContent = (content, classes, index) =>
     `
      <div class="${classes.tocContentWrapper}">
-        <div class="${classes.tocTitle}">
+        <div 
+            class="${classes.tocTitle}"
+            onclick="${goToTask(index)}"
+        >
             ${content.title}
         </div>
         ${content.descriptions.map(description =>
@@ -17,8 +22,8 @@ const renderContent = (content, classes) =>
 const renderTable = (data, classes) =>
     `
     <div class="${classes.tocListWrapper}">
-        ${data.content.map(content => 
-            renderContent(content, classes)
+        ${data.content.map((content, index) => 
+            renderContent(content, classes, index)
         ).join("")}
     </div>
     `
