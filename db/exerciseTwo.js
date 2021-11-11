@@ -14,7 +14,7 @@ export const tocTwo = {
             ]
         },
         {
-            title: "CSS Positionierung",
+            title: "CSS Positionierung / First Part",
             descriptions: [
                 "Wireframe with CSS",
                 "Positioning with CSS",
@@ -23,7 +23,15 @@ export const tocTwo = {
             ]
         },
         {
-            title: "Wireframe with HTML and CSS",
+            title: "CSS Positionierung / Second Part",
+            descriptions: [
+                "Wireframe with CSS",
+                "Positioning with CSS",
+                "Showing and hiding content",
+            ]
+        },
+        {
+            title: "Wireframe with HTML and CSS / First Part",
             descriptions: [
                 "Wireframe with CSS",
                 "Implementing a Survey Form",
@@ -31,6 +39,12 @@ export const tocTwo = {
                 "Dropdown menus",
                 "Radio Buttons",
                 "Checkboxes",
+            ]
+        },
+        {
+            title: "Wireframe with HTML and CSS / Second Part",
+            descriptions: [
+                "Implementation Difficulties",
             ]
         },
     ],

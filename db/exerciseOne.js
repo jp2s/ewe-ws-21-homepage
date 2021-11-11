@@ -19,6 +19,16 @@ export const tocOne = {
             ]
         },
         {
+            title: "HTML-Literatur lesen und Fragen beantworten",
+            descriptions: [
+                "What is HTML?",
+                "Nesting HTML Lists",
+                "Building a menu / table",
+                "Naming conventions",
+                "Image attributes",
+            ]
+        },
+        {
             title: "HTML Wireframe",
             descriptions: [
                 "Wireframe without CSS",
