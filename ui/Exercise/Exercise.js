@@ -6,10 +6,10 @@ const renderRequestReply = (requestText, replyText, classes) =>
     <div class="${classes.replyClass}">${replyText}</div>
     `
 
-const renderTask = (data, classes) =>
+const renderTask = (data, classes, index) =>
     `
     <div class="${classes.taskWrapperClass}">
-        <div class="${classes.titleClass}">${data.title}</div>
+        <div id="task${index}" class="${classes.titleClass}">${data.title}</div>
         ${data.text ? data.text.map(item => renderRequestReply(item.request, item.reply, classes)).join('') : ""}
         ${data.wireframe ? data.wireframe : ""}
     </div>
@@ -20,7 +20,7 @@ const renderExercise = (data, classes, tocData) =>
         <div class="${classes.exerciseWrapperClass}">
             <div class="${classes.exerciseClass}">${data.title}</div>
             ${renderTableOfContents(tocData, classes)}
-            ${data.tasks.map(task => renderTask(task, classes)).join('')}
+            ${data.tasks.map((task, index) => renderTask(task, classes, index)).join('')}
         </div>
     `
 
