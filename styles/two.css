@@ -106,7 +106,7 @@
     background: rgba(147,112,219,0.8);
     transition-duration: 0.3s;
 }
-.twoModalClassA, .twoModalClassB, .twoModalClassC {
+.twoModalClass {
     position: fixed;
     z-index: 1;
     left: 0;
@@ -151,7 +151,7 @@
     opacity: 0.5;
     width: 100%;
 }
-.twoWireframePageModalClass_u02-t2-1, .twoWireframePageModalClass_u02-t2-2, .twoWireframePageModalClass_u02-t3 {
+.twoWireframePageModalClass {
     position: fixed;
     z-index: 1;
     left: 0;
@@ -217,6 +217,21 @@
 .twoTocTitle:hover {
     color: gold;
     transition-duration: 0.3s;
+}
+/*---------- go to top ----------*/
+.twoGoToToWrapper {
+    border: 4px solid purple;
+    color: black;
+}
+.twoGoToToWrapper:hover {
+    cursor:pointer;
+    border: 4px solid gold;
+    color: gold;
+    transition-duration: 0.3s;
+}
+.twoGoToTopArrow {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.7);
 }
 /*---------- other ----------*/
 .twoCodeWrapperClass {

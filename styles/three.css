@@ -92,7 +92,7 @@
     background: rgba(50, 205, 50, 0.8);
     transition-duration: 0.3s;
 }
-.threeModalClassA, .threeModalClassB, .threeModalClassC {
+.threeModalClass {
     position: fixed;
     z-index: 1;
     left: 0;
@@ -139,7 +139,7 @@
     opacity: 0.5;
     width: 100%;
 }
-.threeWireframePageModalClass_u03_t1, .threeWireframePageModalClass_u03_t2, .threeWireframePageModalClass_u03_t3 {
+.threeWireframePageModalClass {
     position: fixed;
     z-index: 1;
     left: 0;
@@ -205,6 +205,21 @@
 .threeTocTitle:hover {
     color: cadetblue;
     transition-duration: 0.3s;
+}
+/*---------- go to top ----------*/
+.threeGoToToWrapper {
+    border: 4px solid limegreen;
+    color: black;
+}
+.threeGoToToWrapper:hover {
+    cursor:pointer;
+    border: 4px solid cadetblue;
+    color: cadetblue;
+    transition-duration: 0.3s;
+}
+.threeGoToTopArrow {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.7);
 }
 /*---------- other ----------*/
 .threeCodeWrapperClass {
