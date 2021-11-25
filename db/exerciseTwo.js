@@ -237,7 +237,7 @@ export const exerciseTwo = {
                     imgPreviewClass: "twoImgPreviewClass",
                     openButtonClass: "twoOpenButtonClass",
                     closeButtonClass: "twoCloseButtonClass",
-                    modalClass: "twoModalClassA",
+                    modalClass: "twoModalClass",
                     modalWrapper: "twoModalWrapper",
                     imgClass: "twoImgClass",
                     codeTitleClass: "twoCodeTitleClass",
@@ -245,10 +245,11 @@ export const exerciseTwo = {
                     iframeTitleClass: "twoIframeTitleClass",
                     wireframePagePreviewWrapperClass: "twoWireframePagePreviewWrapperClass",
                     wireframePagePreviewClass: "twoWireframePagePreviewClass",
-                    wireframePageModalClass: "twoWireframePageModalClass_u02-t2-1",
+                    wireframePageModalClass: "twoWireframePageModalClass",
                     wireframePageModalWrapper: "twoWireframePageModalWrapper",
                     wireframePageClass: "twoWireframePageClass"
-                }
+                },
+                "firstModal"
             ),
         },
         {
@@ -320,7 +321,7 @@ export const exerciseTwo = {
                     imgPreviewClass: "twoImgPreviewClass",
                     openButtonClass: "twoOpenButtonClass",
                     closeButtonClass: "twoCloseButtonClass",
-                    modalClass: "twoModalClassB",
+                    modalClass: "twoModalClass",
                     modalWrapper: "twoModalWrapper",
                     imgClass: "twoImgClass",
                     codeTitleClass: "twoCodeTitleClass",
@@ -328,10 +329,11 @@ export const exerciseTwo = {
                     iframeTitleClass: "twoIframeTitleClass",
                     wireframePagePreviewWrapperClass: "twoWireframePagePreviewWrapperClass",
                     wireframePagePreviewClass: "twoWireframePagePreviewClass",
-                    wireframePageModalClass: "twoWireframePageModalClass_u02-t2-2",
+                    wireframePageModalClass: "twoWireframePageModalClass",
                     wireframePageModalWrapper: "twoWireframePageModalWrapper",
                     wireframePageClass: "twoWireframePageClass"
-                }
+                },
+                "secondModal"
             ),
         },
         {
@@ -514,7 +516,7 @@ export const exerciseTwo = {
                     imgPreviewClass: "twoImgPreviewClass",
                     openButtonClass: "twoOpenButtonClass",
                     closeButtonClass: "twoCloseButtonClass",
-                    modalClass: "twoModalClassC",
+                    modalClass: "twoModalClass",
                     modalWrapper: "twoModalWrapper",
                     imgClass: "twoImgClass",
                     codeTitleClass: "twoCodeTitleClass",
@@ -522,10 +524,11 @@ export const exerciseTwo = {
                     iframeTitleClass: "twoIframeTitleClass",
                     wireframePagePreviewWrapperClass: "twoWireframePagePreviewWrapperClass",
                     wireframePagePreviewClass: "twoWireframePagePreviewClass",
-                    wireframePageModalClass: "twoWireframePageModalClass_u02-t3",
+                    wireframePageModalClass: "twoWireframePageModalClass",
                     wireframePageModalWrapper: "twoWireframePageModalWrapper",
                     wireframePageClass: "twoWireframePageClass"
-                }
+                },
+                "thirdModal"
             ),
         },
         {

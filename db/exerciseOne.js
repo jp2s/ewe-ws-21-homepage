@@ -200,8 +200,8 @@ export const exerciseOne = {
                     wireframePageModalClass: "oneWireframePageModalClass",
                     wireframePageModalWrapper: "oneWireframePageModalWrapper",
                     wireframePageClass: "oneWireframePageClass",
-                }
-
+                },
+                "firstModal"
             ),
         },
     ]
