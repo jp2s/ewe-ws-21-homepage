@@ -1,4 +1,5 @@
 import {renderTableOfContents} from "../TableOfContents/TableOfContents.js";
+import {renderGoToTop} from "../GoToTop/GoToTop.js";
 
 const renderRequestReply = (requestText, replyText, classes) =>
     `
@@ -22,6 +23,7 @@ const renderExercise = (data, classes, tocData) =>
             ${renderTableOfContents(tocData, classes)}
             ${data.tasks.map((task, index) => renderTask(task, classes, index)).join('')}
         </div>
+        ${renderGoToTop(classes)}
     `
 
 export const renderComponentExercise = (swapData, data, classes, tocData) => {
