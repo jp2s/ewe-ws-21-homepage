@@ -34,16 +34,3 @@ export const renderTableOfContents = (data, classes) =>
         ${renderTable(data, classes)}
     </div>
     `
-
-// export const renderComponentTableOfContents = (
-//     swapData,
-//     data,
-//     classes
-// ) => {
-//     const current = document.querySelector(`script#${swapData.query}`);
-//     const replacement = document.createElement("div");
-//     replacement.setAttribute("id", swapData.givenId);
-//     replacement.setAttribute("class", swapData.givenClass);
-//     replacement.innerHTML = renderTableOfContents(data, classes);
-//     current.parentNode.replaceChild(replacement, current);
-// }
