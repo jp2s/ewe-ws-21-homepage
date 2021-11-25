@@ -20,6 +20,8 @@ renderComponentExercise(
         tocDescription: "threeTocDescription",
         tocContentWrapper: "threeTocContentWrapper",
         tocTitle: "threeTocTitle",
+        goToToWrapper: "threeGoToToWrapper",
+        goToTopArrow: "threeGoToTopArrow"
     },
     tocThree,
 )
