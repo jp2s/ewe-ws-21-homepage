@@ -13,6 +13,7 @@ const renderTask = (data, classes, index) =>
         <div id="task${index}" class="${classes.titleClass}">${data.title}</div>
         ${data.text ? data.text.map(item => renderRequestReply(item.request, item.reply, classes)).join('') : ""}
         ${data.wireframe ? data.wireframe : ""}
+        ${data.taskPages ? data.taskPages.map(page => page).join('') : ""}
     </div>
     `
 
