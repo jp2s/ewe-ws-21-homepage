@@ -43,7 +43,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    row-gap: 32px;
+    row-gap: 24px;
 }
 .fiveImgPreviewWrapperClass {
     background: navy;
@@ -127,7 +127,7 @@
 .fiveIframeTitleClass, .fiveCodeTitleClass {
     font-family: appleGaramondBoldItalic, serif;
     font-size: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 .fiveWireframePagePreviewWrapperClass {
     background: navy;
