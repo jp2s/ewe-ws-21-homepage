@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>5.2. Rednerliste mit Zeitmessung (5 Punkte)</title>
+    <style>
+        html {
+            width: 100vw;
+            height: 100vh;
+            font-family: Helvetica Neue, serif;
+            font-size: 20px;
+        }
+        body {
+            margin: 16px;
+        }
+        .container {
+            display: flex;
+        }
+        .pageWrapper {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 30px;
+        }
+        .inputWrapper {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: 20px;
+        }
+        #talkerList {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            row-gap: 15px;
+        }
+        .timer {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 10px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 50px;
+            border-bottom: 8px solid hotpink;
+            margin-bottom: 10px;
+        }
+        .startButton {
+            color: black;
+            border: 4px solid turquoise;
+            padding: 8px;
+        }
+        .startButton:hover {
+            background: hotpink;
+            color: white;
+            transition-duration: 0.3s;
+            cursor: pointer;
+        }
+        .stopButton {
+            color: black;
+            border: 4px solid hotpink;
+            padding: 8px;
+        }
+        .stopButton:hover {
+            background: turquoise;
+            color: white;
+            transition-duration: 0.3s;
+            cursor: pointer;
+        }
+        #activeTimer {
+            color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="pageWrapper container">
+        <div class="title">Rednerliste</div>
+        <div class="inputWrapper container">
+            <div>Neuer Redner:</div>
+            <input type="text" id="textInput">
+            <div id="addButton" class="startButton" onclick="addTalker()">Hinzufügen</div>
+        </div>
+        <ul id="talkerList" class="container"></ul>
+    </div>
+    <script src="u05-t2.js"></script>
+</body>
+</html>
