@@ -11,14 +11,15 @@ const renderHeader = () =>
         <div class="navBarItem" onclick="${goToPage('two')}">two</div>
         <div class="navBarItem" onclick="${goToPage('three')}">three</div>
         <div class="navBarItem" onclick="${goToPage('four')}">four</div>
-        <div class="navBarItem">five</div>
-        <div class="navBarItem">six</div>
-        <div class="navBarItem">seven</div>
-        <div class="navBarItem">eight</div>
-        <div class="navBarItem">nine</div>
-        <div class="navBarItem">ten</div>
-        <div class="navBarItem">eleven</div>
-        <div class="navBarItem">twelve</div>
+        <div class="navBarItem" onclick="${goToPage('five')}">five</div>
+        <div class="navBarItem" onclick="${goToPage('six')}">six</div>
+        <div class="navBarItem" onclick="${goToPage('seven')}">seven</div>
+        <div class="navBarItem" onclick="${goToPage('eight')}">eight</div>
+        <div class="navBarItem" onclick="${goToPage('nine')}">nine</div>
+        <div class="navBarItem" onclick="${goToPage('ten')}">ten</div>
+        <div class="navBarItem" onclick="${goToPage('eleven')}">eleven</div>
+        <div class="navBarItem" onclick="${goToPage('twelve')}">twelve</div>
+        <div class="navBarItem" onclick="${goToPage('thirteen')}">thirteen</div>
     </div>
     <hr align="left" id="headerDivider">
     `
