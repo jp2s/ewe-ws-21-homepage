@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>6.1. Klammerpaare (2 Punkte)</title>
+    <style>
+        html {
+            font-family: Helvetica Neue, serif;
+            font-size: 30px;
+        }
+        body {
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .mainContentWrapper {
+            row-gap: 48px;
+            margin: 16px;
+            width: calc(100vw - 32px);
+            height: calc(100vh - 32px);
+        }
+        .contentWrapper {
+            row-gap: 32px;
+        }
+        .descriptionWrapper {
+            row-gap: 16px;
+        }
+        .listWrapper {
+            row-gap: 8px;
+            margin: 0;
+        }
+        .inputWrapper {
+            row-gap: 8px;
+        }
+        #title {
+            font-weight: bold;
+            font-size: 50px;
+            border-bottom: 8px solid turquoise;
+        }
+        #textField {
+            width: 660px;
+            border: 4px solid black;
+            background-color: lightgreen;
+            font-size: 30px;
+            font-family: monospace;
+            transition: background-color 0.3s;
+            padding: 8px;
+        }
+    </style>
+    <script>
+        const matchesTop = (char, top) => {
+            return (char === ")" && top === "(") ||
+                (char === "}" && top === "{") ||
+                (char === "]" && top === "[")
+        }
+
+        const validateBrackets = (text) => {
+            if (text === "") return true;
+            let stack = [];
+            const textArray = text.split("");
+            for (let i = 0; i < textArray.length; ++i) {
+                const char = textArray[i];
+                if (char === "(" || char === "{" || char === "[") {
+                    stack.push(char);
+                }
+                if (char === ")" || char === "}" || char === "]") {
+                    const top = stack[stack.length - 1];
+                    if (top && matchesTop(char, top)) {
+                        stack.pop();
+                    } else {
+                        return false;
+                    }
+                }
+            }
+            return stack.length === 0;
+        }
+
+        const handleChange = () => {
+            const textField = document.getElementById("textField");
+            let text = textField.value;
+            const isValid = validateBrackets(text)
+            if (isValid) {
+                textField.style.setProperty("background-color", "lightgreen");
+            } else {
+                textField.style.setProperty("background-color", "red");
+            }
+        }
+
+        console.assert(validateBrackets(""));
+        console.assert(!validateBrackets("{)"));
+        console.assert(!validateBrackets(")) (("));
+        console.assert(!validateBrackets("{{ }}}"));
+        console.assert(validateBrackets("( ( ( ) ))"));
+        console.assert(validateBrackets("[{(([][][{{{(((abc[[[{}]]])))}}}]))}]"));
+    </script>
+</head>
+<body>
+    <div class="mainContentWrapper container">
+        <div id="title">Automatic Bracket Validator</div>
+
+        <div class="contentWrapper container">
+            <div class="descriptionWrapper container">
+                <div>Allowed brackets:</div>
+
+                <ul class="listWrapper container">
+                    <li><code>()</code></li>
+                    <li><code>{}</code></li>
+                    <li><code>[]</code></li>
+                </ul>
+            </div>
+
+            <div class="inputWrapper container">
+                <label for="textField">please enter your text here:</label>
+
+                <textarea id="textField" onkeyup="handleChange()"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

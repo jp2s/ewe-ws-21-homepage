@@ -1,0 +1,256 @@
+/*---------- exercise ----------*/
+.sixExerciseWrapperClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 30px;
+}
+.sixExerciseTitle {
+    font-size: 70px;
+    font-family: appleGaramond, serif;
+    color: firebrick;
+}
+.sixTaskWrapperClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 10px;
+    padding: 32px;
+    border: 4px solid firebrick;
+    border-radius: 8px;
+}
+.sixTaskTitle {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.sixTaskRequest {
+    font-family: Helvetica Neue, sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+}
+.sixTaskReply {
+    font-family: Helvetica Neue, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 12px;
+}
+/*---------- image wireframe ----------*/
+.sixWireframeWrapperClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 24px;
+}
+.sixImgPreviewWrapperClass {
+    background: firebrick;
+    width: 30%;
+    position: relative;
+}
+.sixImgPreviewWrapperClass:hover {
+    background: rgb(178,34,34);
+    background: linear-gradient(90deg, rgba(178,34,34,1) 0%, rgba(147,112,219,1) 100%);
+}
+.sixImgPreviewClass{
+    opacity: 0.5;
+    width: 100%;
+}
+.sixOpenButtonClass {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: appleGaramondBoldItalic, serif;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    border: 4px solid firebrick;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.8);
+}
+.sixOpenButtonClass:hover {
+    border: 4px solid firebrick;
+    color: white;
+    background: rgba(178,34,34, 0.8);
+    transition-duration: 0.3s;
+}
+.sixCloseButtonClass {
+    cursor: pointer;
+    font-family: appleGaramondBoldItalic, serif;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    border: 4px solid firebrick;
+    background: rgba(255, 255, 255, 0.8);
+    width: 20%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.sixCloseButtonClass:hover {
+    border: 4px solid firebrick;
+    color: white;
+    background: rgba(178,34,34, 0.8);
+    transition-duration: 0.3s;
+}
+.sixModalClass {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background: rgb(178,34,34);
+    background: linear-gradient(90deg, rgba(178,34,34,0.9) 0%, rgba(147,112,219,0.9) 100%);
+    /*overflow: hidden;*/
+}
+.sixModalWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    row-gap: 20px;
+}
+.sixImgClass {
+    border: 4px solid firebrick;
+    height: 80vh;
+}
+
+
+/*---------- iframe page preview ----------*/
+.sixIframeTitleClass, .sixCodeTitleClass {
+    font-family: appleGaramondBoldItalic, serif;
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+.sixWireframePagePreviewWrapperClass {
+    background: firebrick;
+    border: 4px solid firebrick;
+    width: 70%;
+    position: relative;
+}
+.sixWireframePagePreviewWrapperClass:hover {
+    background: rgb(178,34,34);
+    background: linear-gradient(90deg, rgba(178,34,34,1) 0%, rgba(147,112,219,1) 100%);
+}
+.sixWireframePagePreviewClass {
+    opacity: 0.5;
+    width: 100%;
+}
+.sixWireframePageModalClass {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background: rgb(178,34,34);
+    background: linear-gradient(90deg, rgba(178,34,34,0.9) 0%, rgba(147,112,219,0.9) 100%);
+    /*overflow: hidden;*/
+}
+.sixWireframePageModalWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    row-gap: 20px;
+}
+.sixWireframePageClass {
+    border: 4px solid firebrick;
+    background: white;
+    width: 80vw;
+    height: 80vh;
+}
+.sixWireframePageRefClass {
+    cursor: pointer;
+    font-family: appleGaramondBoldItalic, serif;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    border: 4px solid firebrick;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s;
+    width: calc(70% - 32px);
+}
+.sixWireframePageRefClass:hover {
+    border: 4px solid firebrick;
+    color: white;
+    background: rgba(178,34,34,0.8);
+    transition: all 0.3s;
+}
+.sixWireframePagePreviewContainerClass {
+    flex-direction: column;
+    row-gap: 16px;
+}
+/*---------- toc ----------*/
+.sixTocWrapperClass {
+    /*border-top: 4px dotted limegreen;*/
+    /*border-bottom: 4px dotted limegreen;*/
+    /*padding-top: 16px;*/
+    /*padding-bottom: 24px;*/
+    border-left: 4px dotted mediumpurple;
+    padding-left: 32px;
+}
+.sixTocListWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+.sixTocDescription:before {
+    content: "::";
+    color: firebrick;
+    margin-right: 8px;
+}
+.sixTocDescription {
+    font-size: 20px;
+    margin-left: 64px;
+}
+.sixTocContentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+.sixTocTitle {
+    font-family: appleGaramondBoldItalic, serif;
+    font-size: 35px;
+}
+.sixTocTitle:hover {
+    color: mediumpurple;
+    transition-duration: 0.3s;
+}
+/*---------- go to top ----------*/
+.sixGoToToWrapper {
+    border: 4px solid firebrick;
+    color: black;
+}
+.sixGoToToWrapper:hover {
+    cursor:pointer;
+    border: 4px solid mediumpurple;
+    color: mediumpurple;
+    transition-duration: 0.3s;
+}
+.sixGoToTopArrow {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.7);
+}
+/*---------- other ----------*/
+.sixCodeWrapperClass {
+    font-size: 16px;
+    border: 4px solid mediumpurple;
+    border-radius: 16px;
+    padding: 0px 32px 0px 32px;
+}
