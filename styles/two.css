@@ -141,7 +141,6 @@
     background: purple;
     width: 70%;
     position: relative;
-    margin-bottom: 40px;
 }
 .twoWireframePagePreviewWrapperClass:hover {
     background: rgb(255,215,0);
@@ -237,5 +236,4 @@
 .twoCodeWrapperClass {
     border: 4px solid purple;
     padding: 0px 32px 0px 32px;
-    /*max-width: 80vw;*/
 }

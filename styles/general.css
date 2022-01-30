@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: "Helvetica Neue", serif;
+    font-family: "Helvetica Neue", sans-serif;
     margin: 3%;
 }
 .container {
@@ -95,7 +95,7 @@ body {
     white-space: nowrap;
 }
 #welcomeCredits {
-    font-family: miami, serif;
+    font-family: miami, sans-serif;
     font-size: 170px;
     color: hotpink;
     position: absolute;
