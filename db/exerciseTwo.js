@@ -67,11 +67,13 @@ const wireframeClasses = {
     codeTitleClass: "twoCodeTitleClass",
     codeWrapperClass: "twoCodeWrapperClass",
     iframeTitleClass: "twoIframeTitleClass",
+    wireframePagePreviewContainerClass: "twoWireframePagePreviewContainerClass",
     wireframePagePreviewWrapperClass: "twoWireframePagePreviewWrapperClass",
     wireframePagePreviewClass: "twoWireframePagePreviewClass",
     wireframePageModalClass: "twoWireframePageModalClass",
     wireframePageModalWrapper: "twoWireframePageModalWrapper",
-    wireframePageClass: "twoWireframePageClass"
+    wireframePageClass: "twoWireframePageClass",
+    wireframePageRefClass: "twoWireframePageRefClass"
 }
 
 export const exerciseTwo = {

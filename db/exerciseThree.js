@@ -50,11 +50,13 @@ const wireframeClasses = {
     codeTitleClass: "threeCodeTitleClass",
     codeWrapperClass: "threeCodeWrapperClass",
     iframeTitleClass: "threeIframeTitleClass",
+    wireframePagePreviewContainerClass: "threeWireframePagePreviewContainerClass",
     wireframePagePreviewWrapperClass: "threeWireframePagePreviewWrapperClass",
     wireframePagePreviewClass: "threeWireframePagePreviewClass",
     wireframePageModalClass: "threeWireframePageModalClass",
     wireframePageModalWrapper: "threeWireframePageModalWrapper",
     wireframePageClass: "threeWireframePageClass",
+    wireframePageRefClass: "threeWireframePageRefClass"
 }
 
 export const exerciseThree = {

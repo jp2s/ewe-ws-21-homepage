@@ -64,11 +64,13 @@ const wireframeClasses = {
     codeTitleClass: "fourCodeTitleClass",
     codeWrapperClass: "fourCodeWrapperClass",
     iframeTitleClass: "fourIframeTitleClass",
+    wireframePagePreviewContainerClass: "fourWireframePagePreviewContainerClass",
     wireframePagePreviewWrapperClass: "fourWireframePagePreviewWrapperClass",
     wireframePagePreviewClass: "fourWireframePagePreviewClass",
     wireframePageModalClass: "fourWireframePageModalClass",
     wireframePageModalWrapper: "fourWireframePageModalWrapper",
     wireframePageClass: "fourWireframePageClass",
+    wireframePageRefClass: "fourWireframePageRefClass"
 }
 
 export const exerciseFour = {
