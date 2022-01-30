@@ -1,6 +1,8 @@
-import {fetchCode} from "../util/code.js";
 import {renderCode} from "../ui/General/General.js";
 import {renderTaskPage} from "../ui/TaskPage/TaskPage.js";
+import {modalIdGenerator} from "../util/generator.js";
+
+const modalIds = modalIdGenerator();
 
 export const tocFour = {
     content: [
@@ -195,20 +197,36 @@ export const exerciseFour = {
                 },
             ],
             taskPages: [
-                renderTaskPage(
+                await renderTaskPage(
                     {
                         requestText: "Wechseln Sie zu BigInt, um alle 2000 Fibonacci-Zahlen korrekt anzuzeigen. Geben Sie hier HTML- und JavaScript-Code zusammen ein:",
-                        code: await fetchCode("../wireframes/u04-t3.html"),
                         taskPageSrc: "../wireframes/u04-t3.html"
                     },
                     wireframeClasses,
-                    "firstModal",
+                    modalIds.next().value,
                 ),
 
             ]
         },
         {
             title: "4.4. Topsort (3 Punkte)",
+            taskPages: [
+                await renderTaskPage(
+                    {
+                        requestText: "In jedem Projekt fallen Aufgaben (Tasks) an. Zwischen den Aufgaben gibt es paarweise Abhängigkeiten. Z.B. kann Task2 von Task1 abhängen, d.h. erst muss Task1 fertig sein, bevor Task2 starten kann, weil es dessen Ergebnisse benötigt. Tasks können auch unabhängig voneinander sein und parallel ablaufen. In JavaScript können Sie die Abhängigkeiten in Arrays codieren, z.B. kann man bei [ [\"schlafen\", \"studieren\"], [\"essen\", \"studieren\"], [\"studieren\", \"prüfen\"] ] nicht prüfen, ohne vorher gegessen zu haben. Transitive Abhängigkeiten müssen also berücksichtigt werden.\n" +
+                            "<br><br>" +
+                            "Schreiben Sie in JavaScript eine Funktion topsort(), die eine topologische Sortierung berechnet. Topologische Sortierung ist eine Form von Sortierung. Sie kennen die Funktion Array.prototype.sort() und wissen, was als Ergebnis erwartet wird, nämlich eine sortiere Liste. Genauso ist das hier. Die Funktion topsort() soll eine sortierte Liste ausgeben, die keine der eingegebenen Abhängigkeiten verletzt.\n" +
+                            "<br><br>" +
+                            "Achten Sie auf Performanz. Berechnen Sie die topologische Sortierung in linearer Zeit (Average Case)." +
+                            "<br><br>" +
+                            "Geben Sie hier HTML- und JavaScript-Code zusammen ein:",
+                        taskPageSrc: "../wireframes/u04-t4.html"
+                    },
+                    wireframeClasses,
+                    modalIds.next().value,
+                ),
+
+            ]
         }
     ]
 }

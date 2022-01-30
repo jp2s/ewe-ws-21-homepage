@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>4.4. Topsort</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica Neue;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .container {
+      display: flex;
+    }
+    .mainContainer {
+      width: 100vw;
+      height: 100vh;
+      row-gap: 40px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .example {
+      row-gap: 10px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .button {
+      border: 5px solid turquoise;
+      padding: 16px;
+      width: 20%;
+      cursor: pointer;
+      text-align: center;
+    }
+    .button:hover {
+      background-color: hotpink;
+      color: white;
+      transition-duration: 0.3s;
+    }
+  </style>
+
+  <script>
+    const example1 = [
+      ["schlafen", "studieren"],
+      ["essen", "studieren"],
+      ["studieren", "prüfen"]
+    ]
+    const result1 = ["schlafen", "essen", "studieren", "prüfen"]
+
+    const example2 = [
+      ["busfahren", "an zielhaltestelle ankommen"],
+      ["busticket kaufen", "busfahren"],
+      ["busfahrplan haben", "busfahren"],
+      ["kleingeld haben", "busticket kaufen"],
+    ]
+    const result2a = [
+      "kleingeld haben",
+      "busfahrplan haben",
+      "busticket kaufen",
+      "busfahren",
+      "an zielhaltestelle ankommen",
+    ]
+    const result2b = [
+      "busfahrplan haben",
+      "kleingeld haben",
+      "busticket kaufen",
+      "busfahren",
+      "an zielhaltestelle ankommen",
+    ]
+
+    console.assert(isEqual(topSort(example1), result1));
+    console.assert(
+            isEqual(topSort(example2), result2a) ||
+            isEqual(topSort(example2), result2b)
+    );
+
+    function isEqual(a, b) {
+      if (a.length !== b.length) {
+        return false;
+      }
+      for (let i = 0; i < a.length; ++i) {
+        if (a[i] !== b[i]) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function topSort (input) {
+      let result = new Set();
+      let count = 0;
+      const maxCount = 40;
+      while (input.length > 0) {
+        for (let i = 0; i < input.length; ++i) {
+          const selectedTask = input[i][0];
+          let hasNoPrev = true;
+          for (let j = 0; j < input.length; ++j) {
+            if (input[j][1] === selectedTask) {
+              hasNoPrev = false;
+            }
+          }
+          if (hasNoPrev) {
+            result.add(selectedTask);
+            input = input
+                    .map(item => item
+                            .filter(task => task !== selectedTask))
+                    .filter(item => item.length !== 0);
+          }
+        }
+        ++count;
+        if (count > maxCount) {
+          return [];
+        }
+      }
+      return Array.from(result)
+    }
+
+    function doTopSort (input) {
+      const current = document.querySelector(`div#cResult`);
+      const replacement = document.createElement("div");
+      replacement.setAttribute("id", "result");
+      replacement.innerHTML = `${topSort(input).map((item, index) => `<div>${index+1}. ${item}</div>`).join('')}`;
+      if (current) {
+        current.parentNode.replaceChild(replacement, current);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container mainContainer">
+    <div class="example container">
+      <div>Beispiel:</div>
+      <code>
+        [ ["schlafen", "studieren"], ["essen", "studieren"], ["studieren", "prüfen"] ]
+      </code>
+    </div>
+
+    <div class="button" onclick="doTopSort(example1)">
+      do top sort
+    </div>
+    <div id="cResult" style="display: none;"></div>
+  </div>
+</body>
+
+</html>
