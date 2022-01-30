@@ -7,7 +7,7 @@ const modalIds = modalIdGenerator();
 export const tocFour = {
     content: [
         {
-            title: "Functions",
+            title: "Funktionen",
             descriptions: [
                 "JavaScript",
                 "Functions",

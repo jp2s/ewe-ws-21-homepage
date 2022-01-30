@@ -1,16 +1,19 @@
 import {renderTaskPage} from "../ui/TaskPage/TaskPage.js";
 import {modalIdGenerator} from "../util/generator.js";
+import {renderCode} from "../ui/General/General.js";
+import {fetchCode} from "../util/code.js";
 
 const modalIds = modalIdGenerator();
 
 export const tocFive = {
     content: [
         {
-            title: "Multiple Stopwatches",
+            title: "Rednerliste mit Zeitmessung",
             descriptions: [
+                "Stopwatch",
+                "Timer",
                 "DOM API",
                 "setInterval",
-                "Timer",
             ]
         },
     ],
@@ -49,6 +52,12 @@ export const exerciseFive = {
     tasks: [
         {
             title: "5.2. Rednerliste mit Zeitmessung (5 Punkte)",
+            text: [
+                {
+                    request: "JavaScript-Quelltext aus der separaten Datei",
+                    reply: renderCode(await fetchCode("../wireframes/u05-t2.js"), codeClasses)
+                }
+            ],
             taskPages: [
                 await renderTaskPage(
                     {
