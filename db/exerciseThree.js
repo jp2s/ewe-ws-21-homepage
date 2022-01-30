@@ -1,5 +1,8 @@
 import {fetchCode} from "../util/code.js";
 import {renderWireframe} from "../ui/Wireframe/Wireframe.js";
+import {modalIdGenerator} from "../util/generator.js";
+
+const modalIds = modalIdGenerator();
 
 export const tocThree = {
     content: [
@@ -67,7 +70,7 @@ export const exerciseThree = {
                     code: await fetchCode("../wireframes/u03-t1.html")
                 },
                 wireframeClasses,
-                "firstModal",
+                modalIds.next().value,
             ),
         },
         {
@@ -80,7 +83,7 @@ export const exerciseThree = {
                     code: await fetchCode("../wireframes/u03-t2.html")
                 },
                 wireframeClasses,
-                "secondModal"
+                modalIds.next().value
             ),
         },
         {
@@ -93,7 +96,7 @@ export const exerciseThree = {
                     code: await fetchCode("../wireframes/u03-t3.html")
                 },
                 wireframeClasses,
-                "thirdModal"
+                modalIds.next().value
             ),
         },
     ]

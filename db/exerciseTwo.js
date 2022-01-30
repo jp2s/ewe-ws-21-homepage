@@ -1,6 +1,9 @@
 import {baseUrl} from "../util/url.js";
-import {renderWireframe} from "../ui/Wireframe/Wireframe.js";
 import {fetchCode} from "../util/code.js";
+import {renderWireframe} from "../ui/Wireframe/Wireframe.js";
+import {modalIdGenerator} from "../util/generator.js";
+
+const modalIds = modalIdGenerator();
 
 export const tocTwo = {
     content: [
@@ -115,7 +118,7 @@ export const exerciseTwo = {
                     code: await fetchCode("../wireframes/u02-t2-1.html")
                 },
                 wireframeClasses,
-                "firstModal"
+                modalIds.next().value
             ),
         },
         {
@@ -128,7 +131,7 @@ export const exerciseTwo = {
                     code: await fetchCode("../wireframes/u02-t2-2.html")
                 },
                 wireframeClasses,
-                "secondModal"
+                modalIds.next().value
             ),
         },
         {
@@ -141,7 +144,7 @@ export const exerciseTwo = {
                     code: await fetchCode("../wireframes/u02-t3.html")
                 },
                 wireframeClasses,
-                "thirdModal"
+                modalIds.next().value
             ),
         },
         {

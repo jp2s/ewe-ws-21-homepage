@@ -1,5 +1,8 @@
 import {fetchCode} from "../util/code.js";
 import {renderWireframe} from "../ui/Wireframe/Wireframe.js";
+import {modalIdGenerator} from "../util/generator.js";
+
+const modalIds = modalIdGenerator()
 
 export const tocOne = {
     content: [
@@ -145,7 +148,7 @@ export const exerciseOne = {
                     code: await fetchCode("../wireframes/u01.html")
                 },
                 wireframeClasses,
-                "firstModal"
+                modalIds.next().value
             ),
         },
     ]
