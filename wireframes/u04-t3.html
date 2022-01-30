@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>4.3. Fibonacci</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica Neue;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+    }
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 40px;
+    }
+    .fiboButton {
+      border: 5px solid turquoise;
+      padding: 16px;
+      width: 40%;
+    }
+    .fiboButton:hover {
+      background-color: hotpink;
+      color: white;
+      transition-duration: 0.3s;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    let fiboSequence = [0, 1];
+    let safeIntGuard = true;
+    let maxValGuard = true;
+
+    console.log(getFibonacci(78));
+
+    function getFibonacci (index) {
+      if (fiboSequence[index] !== undefined) {
+        return fiboSequence[index];
+      }
+      const newValue = getFibonacci(index-1) + getFibonacci(index-2);
+      fiboSequence[index] = newValue;
+
+      if (newValue > Number.MAX_SAFE_INTEGER && safeIntGuard) {
+        console.log(`exceeded Number.MAX_SAFE_INTEGER at index: ${index}`)
+        console.log(`--- ${newValue} ---`)
+        safeIntGuard = false;
+      }
+      if (newValue > Number.MAX_VALUE && maxValGuard) {
+        console.log(`exceeded Number.MAX_VALUE at index: ${index}`)
+        console.log(`--- ${newValue} ---`)
+        maxValGuard = false;
+      }
+
+      return newValue;
+    }
+    function logFibonacci (times) {
+      for (let i = 0; i<times; ++i) {
+        console.log(getFibonacci(i));
+      }
+    }
+
+    let fiboSequenceBigInt = [0n, 1n];
+    function getFibonacciBigInt (index) {
+      if (fiboSequenceBigInt[index] !== undefined) {
+        return fiboSequenceBigInt[index];
+      }
+      const newValue = getFibonacciBigInt(index-1) + getFibonacciBigInt(index-2);
+      fiboSequenceBigInt[index] = newValue;
+
+      return newValue;
+    }
+    function logFibonacciBigInt (times) {
+      for (let i = 0; i<times; ++i) {
+        console.log(getFibonacciBigInt(i));
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="fiboButton" onclick="logFibonacci(2000)">
+      Log first 2000 Fibonacci Numbers with<br><i>number</i>
+    </div>
+
+    <div class="fiboButton" onclick="logFibonacciBigInt(200)">
+      Log first 200 Fibonacci Numbers with<br><i>BigInt</i>
+    </div>
+  </div>
+</body>
+
+</html>
