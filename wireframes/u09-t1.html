@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9.1. SVG Grafik von Hand erstellen (2 Punkte)</title>
+    <style>
+        html {
+            font-weight: bold;
+        }
+        text {
+            color: white;
+        }
+        #content {
+            transition: all 0.7s;
+        }
+        #content:hover {
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div>SVG Use The Platform</div>
+    <svg width="1000" height="1000">
+        <defs>
+            <rect id="divider" width="207" height="5" fill="white" />
+        </defs>
+
+        <g id="content">
+            <rect x="50" y="35" width="300" height="300" fill="#cb798d" stroke-width="5" />
+
+            <text x="80" y="100" font-size="50" font-family="Verdana" fill="white" font-weight="lighter">Use</text>
+            <text x="80" y="190" font-size="50" font-family="Verdana" fill="white" font-weight="lighter">The</text>
+            <text x="80" y="280" font-size="50" font-family="Verdana" fill="white" font-weight="lighter">Platform</text>
+
+            <use x="80" y="115" href="#divider" />
+            <use x="80" y="205" href="#divider" />
+            <use x="80" y="295" href="#divider" />
+        </g>
+    </svg>
+</body>
+</html>

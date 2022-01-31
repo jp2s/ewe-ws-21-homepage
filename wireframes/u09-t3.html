@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>9.3. Interaktive SVG Grafik (5 Punkte)</title>
+    <style>
+        html {
+            font-family: Helvetica Neue, serif;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        body {
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .mainContentWrapper {
+            row-gap: 48px;
+            margin: 64px;
+        }
+        .contentWrapper {
+            width: 100%;
+            height: 500px;
+            row-gap: 40px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 50px;
+            padding-bottom: 4px;
+            transition: all 0.3s;
+        }
+        #titleP1 {
+            border-bottom: 8px solid turquoise;
+        }
+        #titleP2 {
+            border-bottom: 8px solid hotpink;
+        }
+        .hotArea {
+            transition: all 0.3s;
+        }
+        .hotArea:hover {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .hotAreaP1:hover {
+            fill: turquoise;
+        }
+        .hotAreaP2:hover {
+            fill: hotpink;
+        }
+        ins {
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        #descP1 {
+            color: turquoise;
+        }
+        #descP2 {
+            color: hotpink;
+        }
+        .winnerP1 {
+            border-bottom: 8px solid turquoise;
+        }
+        .winnerP2 {
+            border-bottom: 8px solid hotpink;
+        }
+        .button {
+            padding: 16px;
+            width: 20%;
+            cursor: pointer;
+            text-align: center;
+        }
+        .button:hover {
+            color: white;
+            transition-duration: 0.3s;
+        }
+        .buttonP1 {
+            border: 5px solid turquoise;
+        }
+        .buttonP1:hover {
+            background-color: turquoise;
+        }
+        .buttonP2 {
+            border: 5px solid hotpink;
+        }
+        .buttonP2:hover {
+            background-color: hotpink;
+        }
+    </style>
+    <script>
+        let current = "P1"
+        let finished = false;
+
+        const winCombinations = [
+            ["0", "1", "2"],
+            ["3", "4", "5"],
+            ["6", "7", "8"],
+            ["0", "3", "6"],
+            ["1", "4", "7"],
+            ["2", "5", "8"],
+            ["0", "4", "8"],
+            ["6", "4", "2"]
+        ]
+        const positions = [
+            [0, 0],
+            [200, 0],
+            [400, 0],
+            [0, 200],
+            [200, 200],
+            [400, 200],
+            [0, 400],
+            [200, 400],
+            [400, 400],
+        ]
+
+        const createCross = position => {
+            const cross = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+            cross.setAttribute("fill", "turquoise");
+            cross.setAttribute("transform", "translate(100, 100)");
+            cross.setAttribute(
+                "d", "M 25 0 L 0 25 L 25 50 L 0 75 L 25 100 L 50 75 L 75 100 L 100 75 L 75 50 L 100 25 L 75 0 L 50 25 Z"
+            );
+            cross.setAttribute("transform", `translate(${position[0]+50}, ${position[1]+50})`)
+
+            return cross;
+        }
+
+        const createCircle = position => {
+            const circle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+            circle.setAttribute("r", "50");
+            circle.setAttribute("cx", "100");
+            circle.setAttribute("cy", "100");
+            circle.setAttribute("fill", "hotpink");
+            circle.setAttribute("height", "100");
+            circle.setAttribute("width", "100");
+            circle.setAttribute("transform", `translate(${position[0]}, ${position[1]})`)
+
+            return circle;
+        }
+
+        const setShape = (elem, currentPlayer) => {
+            const index = elem.getAttribute("id").split("_")[1];
+            const position = positions[index]
+            const shape = currentPlayer === "P1" ? createCross(position) : createCircle(position);
+
+            const shapeArea = document.getElementById("shapes");
+            shapeArea.append(shape);
+        }
+
+        const changeField = (elem, currentPlayer, nextPlayer) => {
+            setShape(elem, currentPlayer);
+
+            elem.classList.add(`usedBy${currentPlayer}`);
+            elem.classList.remove("hotArea");
+            elem.classList.remove(`hotArea${currentPlayer}`);
+            elem.classList.remove(`hotArea${nextPlayer}`);
+
+            const [won, winner, winSituationIndex] = checkWinSituation();
+
+            if (won) {
+                handleWin(winner, winSituationIndex);
+                return true;
+            }
+
+            const hotAreas = document.getElementsByClassName("hotArea");
+            Array.from(hotAreas).map(hotArea => {
+                hotArea.classList.remove(`hotArea${currentPlayer}`);
+                hotArea.classList.add(`hotArea${nextPlayer}`);
+            })
+
+            const title = document.getElementById(`title${currentPlayer}`);
+            title.setAttribute("id", `title${nextPlayer}`);
+
+            const desc = document.getElementById(`desc${currentPlayer}`);
+            desc.setAttribute("id", `desc${nextPlayer}`);
+            desc.innerText = `Player ${currentPlayer === "P1" ? "2" : "1"}:`
+
+            current = nextPlayer;
+
+            return false;
+        }
+
+        const setField = elem => {
+            if (elem.classList.contains("hotArea") && !finished) {
+                switch (current) {
+                    case "P1":
+                        finished = changeField(elem, "P1", "P2");
+                        break;
+                    case "P2":
+                        finished = changeField(elem, "P2", "P1");
+                        break;
+                }
+            }
+            if (document.getElementsByClassName("hotArea").length === 0 && !finished) {
+                handleTie();
+            }
+        }
+
+        const checkWinCondition = (player) => {
+            let won = false;
+            let winSituationIndex;
+
+            const usedFields = document.getElementsByClassName(`usedBy${player}`);
+            const indices = Array.from(usedFields).map(field => field.getAttribute("id").split("_")[1]);
+
+            if (indices.length >= 3) {
+                winCombinations.map((item, index) => {
+                    if (item.every(field => indices.includes(field))) {
+                        winSituationIndex = index;
+                        won = true;
+                    }
+                })
+            }
+
+            return [won, winSituationIndex]
+        }
+
+        const checkWinSituation = () => {
+            const [wonP1, winSituationIndexP1] = checkWinCondition("P1");
+            const [wonP2, winSituationIndexP2] = checkWinCondition("P2");
+
+            if (wonP1) {
+                return [true, "P1", winSituationIndexP1];
+            } else if (wonP2)
+                return [true, "P2", winSituationIndexP2];
+            else {
+                return [false, "", undefined];
+            }
+        }
+
+        const handleTie = () => {
+            const desc = document.getElementById("desc");
+            desc.innerText = "It’s a tie"
+
+            const replay = createReplayButton("P1");
+
+            const mainContent = document.getElementById("mainContent");
+            mainContent.append(replay);
+        }
+
+        const createReplayButton = (player) => {
+            const replay = document.createElement("div");
+            replay.classList.add("button");
+            replay.classList.add(`button${player}`);
+            replay.setAttribute("onclick", "replay()")
+            replay.innerText = "play again"
+
+            return replay;
+        }
+
+        const handleWin = (winner, winSituationIndex) => {
+            addWinLine(winner, winSituationIndex);
+
+            const hotAreas = document.getElementsByClassName("hotArea");
+            Array.from(hotAreas).map(hotArea => {
+                hotArea.classList.remove("hotArea");
+                hotArea.classList.remove("hotAreaP1");
+                hotArea.classList.remove("hotAreaP2");
+            })
+
+            const desc = document.getElementById("desc");
+            desc.classList.add(`winner${winner}`);
+            const descPlayer = document.getElementById(`desc${winner}`);
+            descPlayer.innerText = `Player ${winner === "P1" ? "1" : "2"}`
+            const descInstruction = document.getElementById("instruction");
+            descInstruction.innerText = "has won the game";
+
+            const replay = createReplayButton(winner);
+
+            const mainContent = document.getElementById("mainContent");
+            mainContent.append(replay);
+        }
+
+        const addWinLine = (winner, winSituationIndex) => {
+            const fillColor = winner === "P2" ? "turquoise" : "hotpink";
+
+            const winLine = document.createElementNS("http://www.w3.org/2000/svg", 'rect');
+            winLine.setAttribute("x", "0");
+            winLine.setAttribute("y", "100");
+            winLine.setAttribute("width", "600");
+            winLine.setAttribute("height", "12");
+            winLine.setAttribute("fill", fillColor);
+
+            let transform;
+            switch (winSituationIndex) {
+                case 0:
+                    transform = "translate(0, 0)";
+                    break;
+                case 1:
+                    transform = "translate(0, 200)";
+                    break;
+                case 2:
+                    transform = "translate(0, 400)";
+                    break;
+                case 3:
+                    transform = "rotate(90, 100, 100)";
+                    break;
+                case 4:
+                    transform = "rotate(90, 200, 200)";
+                    break;
+                case 5:
+                    transform = "rotate(90, 300, 300)";
+                    break;
+                case 6:
+                    transform = "translate(175, 25) rotate(45, 0, 0)";
+                    break;
+                case 7:
+                    transform = "translate(0, 450) rotate(-45, 0, 0)";
+                    break;
+            }
+            winLine.setAttribute("transform", transform);
+
+            const shapeArea = document.getElementById("shapes");
+            shapeArea.append(winLine);
+        }
+
+        const replay = () => {
+            window.location.reload();
+        }
+    </script>
+</head>
+<body>
+<div id="mainContent" class="mainContentWrapper container">
+    <div class="title" id="titleP1">Tic Tac Toe</div>
+
+    <div class="contentWrapper container">
+        <svg viewBox="0 0 600 600">
+            <defs>
+                <rect
+                        x="12"
+                        y="12"
+                        width="188"
+                        height="188"
+                        fill="white"
+                        id="hotArea"
+                />
+            </defs>
+
+            <g id="grid">
+                <rect  x="200" y="12"   width="12" height="600" fill="black" />
+                <rect  x="400" y="12"   width="12" height="600" fill="black" />
+                <rect  x="12"   y="200" width="600" height="12" fill="black" />
+                <rect  x="12"   y="400" width="600" height="12" fill="black" />
+
+                <rect id="position_0" x="12" y="12" width="188" height="188" fill="white" class="hotArea hotAreaP1" onclick="setField(this)"/>
+                <rect id="position_1" x="212" y="12" width="188" height="188" fill="white" class="hotArea hotAreaP1" onclick="setField(this)"/>
+                <rect id="position_2" x="412" y="12" width="188" height="188" fill="white" class="hotArea hotAreaP1" onclick="setField(this)"/>
+                <rect id="position_3" x="12" y="212" width="188" height="188" fill="white" class="hotArea hotAreaP1" onclick="setField(this)"/>
+                <rect id="position_4" x="212" y="212" width="188" height="188" fill="white" class="hotArea hotAreaP1" onclick="setField(this)"/>
+                <rect id="position_5" x="412" y="212" width="188" height="188" fill="white" class="hotArea hotAreaP1" onclick="setField(this)"/>
+                <rect id="position_6" x="12" y="412" width="188" height="188" fill="white" class="hotArea hotAreaP1" onclick="setField(this)"/>
+                <rect id="position_7" x="212" y="412" width="188" height="188" fill="white" class="hotArea hotAreaP1" onclick="setField(this)"/>
+                <rect id="position_8" x="412" y="412" width="188" height="188" fill="white" class="hotArea hotAreaP1" onclick="setField(this)"/>
+            </g>
+
+            <g id="shapes"></g>
+        </svg>
+    </div>
+
+    <div id="desc"><ins id="descP1">Player 1:</ins> <ins id="instruction">Make your move</ins></div>
+</div>
+</body>
+</html>

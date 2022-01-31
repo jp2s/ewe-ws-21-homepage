@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9.2. Statistik-Balkendiagramm in SVG (3 Punkte)</title>
+    <style>
+        html {
+            background: #ccc;
+            font-family: "Helvetica Neue", serif;
+        }
+        svg {
+            background: #bbb;
+        }
+        .bar {
+            transition: width 2.0s;
+        }
+        #desc {
+            margin-top: 16px;
+            margin-bottom: 8px;
+            font-size: 25px;
+        }
+        #subDesc {
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+        .axisDesc {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        const data = {
+            BadenWuerttemberg: 857957,
+            Bayern: 1167598,
+            Berlin: 282068,
+            Brandenburg: 186828,
+            Bremen: 40308,
+            Hamburg: 116140,
+            Hessen: 422403,
+            MecklenburgVorpommern: 75321,
+            Niedersachsen: 384998,
+            NordrheinWestfalen: 1201564,
+            RheinlandPfalz: 239998,
+            Saarland: 63261,
+            Sachsen: 524645,
+            SachsenAnhalt: 166227,
+            SchleswigHolstein: 98841,
+            Thueringen: 223403,
+        }
+        let widths = [];
+
+        const formatLabel = label => label.split("").map(char => {
+            switch (char) {
+                case char.toUpperCase():
+                    return ` ${char}`;
+                default:
+                    return char;
+            }
+        }).join("")
+
+        const renderLabel = (label, x, y) =>
+            `
+            <text x="${x}" y="${y}" font-size="7" font-family="Verdana" font-weight="lighter">${formatLabel(label)}</text>
+            `
+
+        const renderBar = (value, x, y) =>
+            `
+            <rect class="bar" x="${x}" y="${y}" width="${value}" height="4" fill="red" />
+            <text class="valueLabel" x="120" y="${y+5}" font-size="7" font-family="Verdana" font-weight="lighter" fill="red"></text>
+            `
+
+        const renderState = (name, value, x, y) =>
+            `
+            <g>
+                ${renderLabel(name, x, y+3)}
+                ${renderBar(value, 110, y-2)}
+            </g>
+            `
+
+        const renderData = data => {
+            const keys = Object.keys(data);
+            const dataArray = keys.map(key => data[key]);
+            return dataArray.map((item, index) => {
+                const name = keys[index];
+                widths[index] = item;
+                return renderState(name, 0, 0, 19*index)
+            }).join("");
+        }
+
+        const loadValues = () => {
+            const bars = document.getElementsByClassName("bar");
+            Array.from(bars).map((bar, index) => {
+                bar.setAttribute("width", (widths[index]/2000).toString())
+            })
+
+        }
+
+        const loadValueLabels = () => {
+            const valueLabels = document.getElementsByClassName("valueLabel");
+            Array.from(valueLabels).map((valueLabel, index) => {
+                valueLabel.setAttribute("x", (widths[index]/2000+120).toString())
+                valueLabel.textContent = widths[index];
+            })
+        }
+
+        const renderBarChart = () => {
+            const content = document.getElementById("content");
+            content.innerHTML = renderData(data);
+
+            setTimeout(loadValues, 500);
+            setTimeout(loadValueLabels, 2600);
+        }
+
+        window.onload = renderBarChart;
+    </script>
+</head>
+<body>
+    <div id="desc">COVID-19: Fallzahlen in Deutschland</div>
+    <div id="subDesc">Stand: Freitag 03.12.2021, 00:00 Uhr (online aktualisiert um 08:25 Uhr)</div>
+    <svg viewBox="0 0 800 360">
+        <defs>
+            <g id="vert">
+                <rect  x="0" width="1" height="300" fill="black" opacity="0.3"/>
+                <rect x="25" width="1" height="300" fill="black" opacity="0.1" />
+                <rect x="50" width="1" height="300" fill="black" opacity="0.1" />
+                <rect x="75" width="1" height="300" fill="black" opacity="0.1" />
+            </g>
+        </defs>
+
+        <text class="axisDesc" x="20" y="20" font-size="7" font-family="Verdana" font-weight="lighter">Bundesland:</text>
+        <text class="axisDesc" x="20" y="345" font-size="7" font-family="Verdana" font-weight="lighter">Anzahl:</text>
+
+        <g transform="translate(0, 7)">
+            <g transform="translate(130, 20)">
+                <use href="#vert" />
+                <use href="#vert" transform="translate(100)" />
+                <use href="#vert" transform="translate(200)" />
+                <use href="#vert" transform="translate(300)" />
+                <use href="#vert" transform="translate(400)" />
+                <use href="#vert" transform="translate(500)" />
+                <use href="#vert" transform="translate(600)" />
+
+                <text   x="0" y="317" font-size="7" font-family="Verdana" font-weight="lighter">0</text>
+                <text x="100" y="317" font-size="7" font-family="Verdana" font-weight="lighter">200.000</text>
+                <text x="200" y="317" font-size="7" font-family="Verdana" font-weight="lighter">400.000</text>
+                <text x="300" y="317" font-size="7" font-family="Verdana" font-weight="lighter">600.000</text>
+                <text x="400" y="317" font-size="7" font-family="Verdana" font-weight="lighter">800.000</text>
+                <text x="500" y="317" font-size="7" font-family="Verdana" font-weight="lighter">1.000.000</text>
+                <text x="600" y="317" font-size="7" font-family="Verdana" font-weight="lighter">1.200.000</text>
+            </g>
+
+            <g id="content" transform="translate(20, 28)"></g>
+        </g>
+    </svg>
+</body>
+</html>
