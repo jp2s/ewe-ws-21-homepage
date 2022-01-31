@@ -3,8 +3,7 @@ import {fetchCode} from "../util/code.js";
 import {renderTaskPage} from "../ui/TaskPage/TaskPage.js";
 import {renderWireframe} from "../ui/Wireframe/Wireframe.js";
 import {modalIdGenerator} from "../util/generator.js";
-import {defaultCodeClasses, defaultWireframeClasses} from "../util/classes.js";
-import {renderCode} from "../ui/General/General.js";
+import {defaultWireframeClasses} from "../util/classes.js";
 
 const modalIds = modalIdGenerator();
 

@@ -1,7 +1,5 @@
-import {renderTaskPage} from "../ui/TaskPage/TaskPage.js";
 import {modalIdGenerator} from "../util/generator.js";
 import {renderCode} from "../ui/General/General.js";
-import {fetchCode} from "../util/code.js";
 
 const modalIds = modalIdGenerator();
 
