@@ -1,7 +1,4 @@
-import {modalIdGenerator} from "../util/generator.js";
 import {renderCode} from "../ui/General/General.js";
-
-const modalIds = modalIdGenerator();
 
 export const tocSeven = {
     content: [
@@ -21,29 +18,6 @@ export const tocSeven = {
 const codeClasses = {
     codeTitleClass: "sevenCodeTitleClass",
     codeWrapperClass: "sevenCodeWrapperClass"
-}
-
-const wireframeClasses = {
-    wireframeWrapperClass: "sevenWireframeWrapperClass",
-    taskPageWrapperClass: "sevenWireframeWrapperClass",
-    requestClass: "sevenTaskRequest",
-    imgPreviewWrapperClass: "sevenImgPreviewWrapperClass",
-    imgPreviewClass: "sevenImgPreviewClass",
-    openButtonClass: "sevenOpenButtonClass",
-    closeButtonClass: "sevenCloseButtonClass",
-    modalClass: "sevenModalClass",
-    modalWrapper: "sevenModalWrapper",
-    imgClass: "sevenImgClass",
-    codeTitleClass: "sevenCodeTitleClass",
-    codeWrapperClass: "sevenCodeWrapperClass",
-    iframeTitleClass: "sevenIframeTitleClass",
-    wireframePagePreviewContainerClass: "sevenWireframePagePreviewContainerClass",
-    wireframePagePreviewWrapperClass: "sevenWireframePagePreviewWrapperClass",
-    wireframePagePreviewClass: "sevenWireframePagePreviewClass",
-    wireframePageModalClass: "sevenWireframePageModalClass",
-    wireframePageModalWrapper: "sevenWireframePageModalWrapper",
-    wireframePageClass: "sevenWireframePageClass",
-    wireframePageRefClass: "sevenWireframePageRefClass"
 }
 
 export const exerciseSeven = {
