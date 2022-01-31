@@ -1,5 +1,8 @@
 /*Override defaults*/
 
+.defaultTaskRequest {
+    font-family: Helvetica Neue, sans-serif;
+}
 .defaultExerciseTitle {
     color: seagreen;
 }
