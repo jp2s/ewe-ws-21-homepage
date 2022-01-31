@@ -227,7 +227,6 @@ export const exerciseFour = {
                     wireframeClasses,
                     modalIds.next().value,
                 ),
-
             ]
         }
     ]

@@ -9,7 +9,7 @@ export const renderTaskPage = async (data, classes, modalId) =>
     `
     <div class=${classes.taskPageWrapperClass}>
         ${renderRequest(data.requestText, classes)}
-        ${renderCode(await fetchCode(data.taskPageSrc), classes)}
         ${renderPagePreview(data.taskPageSrc, classes, modalId)}
+        ${renderCode(await fetchCode(data.taskPageSrc), classes)}
     </div>
     `
