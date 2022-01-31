@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>8.1. Promises (3 Punkte)</title>
+    <style>
+        html {
+            font-family: Helvetica Neue, serif;
+            font-size: 30px;
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .mainContentWrapper {
+            width: 100%;
+            height: 100%;
+            row-gap: 48px;
+        }
+        .contentWrapper {
+            row-gap: 40px;
+        }
+        #title {
+            font-weight: bold;
+            font-size: 50px;
+            border-bottom: 8px solid hotpink;
+            padding-bottom: 4px;
+        }
+        #text {
+            text-align: justify;
+        }
+    </style>
+    <script>
+        const fetchData = () => {
+            const elem = document.querySelector("#text");
+
+            Promise.all([
+                fetch("A.txt").then(response => response.text()),
+                fetch("B.txt").then(response => response.text())
+            ]).then(([textA, textB]) => {
+                const splitA = textA.split("\n");
+                const splitB = textB.split("\n");
+
+                elem.innerText = splitA.map(
+                    (row, index) => `${row} ${splitB[index]}`
+                ).join("\n");
+            });
+        }
+
+        window.onload = fetchData;
+    </script>
+</head>
+<body>
+    <div class="mainContentWrapper container">
+        <div id="title">8.1. Promises (3 Punkte)</div>
+
+        <div class="contentWrapper container">
+            <div id="text"></div>
+        </div>
+    </div>
+</body>
+</html>
