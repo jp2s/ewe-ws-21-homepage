@@ -1,7 +1,4 @@
-import {baseUrl} from "../util/url.js";
-import {fetchCode} from "../util/code.js";
 import {renderTaskPage} from "../ui/TaskPage/TaskPage.js";
-import {renderWireframe} from "../ui/Wireframe/Wireframe.js";
 import {modalIdGenerator} from "../util/generator.js";
 import {defaultWireframeClasses} from "../util/classes.js";
 

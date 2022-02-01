@@ -1,12 +1,6 @@
-import {baseUrl} from "../util/url.js";
 import {fetchCode} from "../util/code.js";
-import {renderTaskPage} from "../ui/TaskPage/TaskPage.js";
-import {renderWireframe} from "../ui/Wireframe/Wireframe.js";
-import {modalIdGenerator} from "../util/generator.js";
-import {defaultCodeClasses, defaultWireframeClasses} from "../util/classes.js";
+import {defaultCodeClasses} from "../util/classes.js";
 import {renderCode} from "../ui/General/General.js";
-
-const modalIds = modalIdGenerator();
 
 export const tocThirteen = {
     content: [
