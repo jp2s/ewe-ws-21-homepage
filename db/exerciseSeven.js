@@ -1,4 +1,5 @@
 import {renderCode} from "../ui/General/General.js";
+import {fetchCode} from "../util/code.js";
 
 export const tocSeven = {
     content: [
@@ -10,6 +11,16 @@ export const tocSeven = {
                 "Currying",
                 "Increment",
                 "Prototype"
+            ]
+        },
+        {
+            title: "Textanalyse mit filter-map-reduce",
+            descriptions: [
+                "Text Analyzer",
+                "Stopwords",
+                "Filter",
+                "Map",
+                "Reduce",
             ]
         },
     ],
@@ -98,6 +109,15 @@ export const exerciseSeven = {
                         "}", codeClasses)
                 },
             ],
+        },
+        {
+            title: "7.2. Textanalyse mit filter-map-reduce(2 Punkte)",
+            text: [
+                {
+                    request: "Schreiben Sie in JavaScript eine Textanalyse. Ermitteln Sie die häufigsten Begriffe im Text Plagiatsresolution. <br>Filtern Sie dabei alle Stoppworte und HTML-Tags. Reduzieren Sie das Ergebnis auf die 3 häufigsten Begriffe. ",
+                    reply: renderCode(await fetchCode("../wireframes/u07-t2.js"), codeClasses)
+                }
+            ]
         }
     ]
 }
