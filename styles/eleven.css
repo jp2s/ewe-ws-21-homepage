@@ -1,0 +1,90 @@
+/*Override defaults*/
+.defaultCodeWrapperClass {
+    font-size: 12px;
+}
+.defaultTaskRequest {
+    font-family: Helvetica Neue, sans-serif;
+}
+.defaultTaskReply {
+    font-family: "Helvetica Neue", serif;
+    font-size: 18px;
+}
+.defaultExerciseTitle {
+    color: thistle;
+}
+.defaultTaskWrapperClass {
+    border: 8px solid thistle;
+    border-radius: 0px;
+}
+.defaultImgPreviewWrapperClass {
+    background: thistle;
+}
+.defaultImgPreviewWrapperClass:hover {
+    background: rgb(216,191,216);
+    background: linear-gradient(90deg, rgba(216,191,216,1) 0%, rgba(106,90,205,1) 100%);
+}
+.defaultOpenButtonClass {
+    border: 4px solid thistle;
+}
+.defaultOpenButtonClass:hover {
+    border: 4px solid thistle;
+    background: rgba(216,191,216, 0.8);
+}
+.defaultCloseButtonClass {
+    border: 4px solid thistle;
+}
+.defaultCloseButtonClass:hover {
+    border: 4px solid thistle;
+    background: rgba(216,191,216, 0.8);
+    transition-duration: 0.3s;
+}
+.defaultModalClass {
+    background: rgb(216,191,216);
+    background: linear-gradient(90deg, rgba(216,191,216,0.9) 0%, rgba(106,90,205,0.9) 100%);
+}
+.defaultImgClass {
+    border: 4px solid thistle;
+}
+.defaultWireframePagePreviewWrapperClass {
+    background: thistle;
+    border: 4px solid thistle;
+}
+.defaultWireframePagePreviewWrapperClass:hover {
+    background: rgb(216,191,216);
+    background: linear-gradient(90deg, rgba(216,191,216,1) 0%, rgba(106,90,205,1) 100%);
+}
+.defaultWireframePageModalClass {
+    background: rgb(216,191,216);
+    background: linear-gradient(90deg, rgba(216,191,216,0.9) 0%, rgba(106,90,205,0.9) 100%);
+}
+.defaultWireframePageClass {
+    border: 4px solid thistle;
+}
+.defaultWireframePageRefClass {
+    border: 4px solid thistle;
+}
+.defaultWireframePageRefClass:hover {
+    border: 4px solid thistle;
+    background: rgba(216,191,216,0.8);
+    transition: all 0.3s;
+}
+.defaultTocWrapperClass {
+    border-left: 4px dotted slateblue;
+}
+.defaultTocDescription:before {
+    color: thistle;
+}
+.defaultTocTitle:hover {
+    color: slateblue;
+}
+.defaultGoToToWrapper {
+    border: 4px solid thistle;
+}
+.defaultGoToToWrapper:hover {
+    border: 4px solid slateblue;
+    color: slateblue;
+}
+.defaultCodeWrapperClass {
+    border: 8px solid slateblue;
+    border-radius: 0px;
+}
