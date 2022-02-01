@@ -58,6 +58,9 @@ body {
     cursor: pointer;
     transition-duration: 0.3s;
 }
+#picks:hover {
+    color: gold;
+}
 /*---------- welcome ----------*/
 #welcomeDots {
     margin-top: 50px;
