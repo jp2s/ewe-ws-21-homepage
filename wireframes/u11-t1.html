@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aufgabe 11.1: Komponente in Vue.js (2 Punkte)</title>
+    <style>
+        html {
+            font-family: Helvetica Neue, serif;
+            font-size: 30px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mainContentWrapper {
+            row-gap: 48px;
+            margin: 64px;
+        }
+
+        .contentWrapper {
+            flex-direction: row;
+            column-gap: 100px;
+        }
+
+        #title {
+            font-weight: bold;
+            font-size: 50px;
+            border-bottom: 8px solid hotpink;
+            padding-bottom: 4px;
+        }
+        .comp {
+            padding: 16px;
+        }
+        #comp1 {
+            border: 8px solid purple;
+        }
+        #comp2 {
+            border: 8px solid darkblue;
+        }
+        .componentWrapper {
+            align-items: flex-start;
+            row-gap: 8px;
+        }
+    </style>
+</head>
+<body>
+<div id="app" class="mainContentWrapper container">
+    <div id="title">{{title}}</div>
+
+    <div class="contentWrapper container">
+        <div class="componentWrapper container">
+            <div>Component 1</div>
+            <div id="comp1" class="comp">
+                <text-analyzer color="purple"></text-analyzer>
+            </div>
+        </div>
+
+        <div class="componentWrapper container">
+            <div>Component 2</div>
+            <div id="comp2" class="comp">
+                <text-analyzer color="darkblue"></text-analyzer>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="https://unpkg.com/vue"></script>
+<script type="module">
+    import TextAnalyzer from "./TextAnalyzer.mjs";
+
+    new Vue({
+        el: '#app',
+        data: {
+            title: "Text Analyzer"
+        },
+        methods: {
+        },
+        components: {
+            TextAnalyzer
+        }
+    });
+</script>

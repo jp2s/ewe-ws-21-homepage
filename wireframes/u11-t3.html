@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aufgabe 11.3: Vue.js WWW-Navigator (5 Punkte)</title>
+    <style>
+        html {
+            padding-left: 128px;
+            padding-right: 128px;
+        }
+        #app {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            align-items: center;
+            row-gap: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header-comp
+                title="WWW-Navigator"
+                :entries="Object.keys(contentData)"
+                @set-index="setHeaderIndex"
+        ></header-comp>
+
+        <content-comp
+                v-for="(contentItem, index) in Object.entries(contentData)
+                    .map(item => item[1])
+                "
+                :content-item="contentItem"
+                :style="index === headerIndex ? show : hide"
+        ></content-comp>
+    </div>
+</body>
+</html>
+
+<script src="https://unpkg.com/vue"></script>
+<script type="module">
+    import HeaderComp from "./HeaderComp.mjs";
+    import ContentComp from "./ContentComp.mjs";
+
+    new Vue({
+        el: '#app',
+        data: {
+            contentData: (await (await fetch("u11-t3.json")).json()),
+            headerIndex: 0,
+        },
+        methods: {
+            setHeaderIndex: function(index) {
+                this.headerIndex = index
+            }
+        },
+        components: {
+            HeaderComp,
+            ContentComp
+        },
+        computed: {
+            hide() {
+                return "display: none;"
+            },
+            show() {
+                return "";
+            }
+        }
+    });
+</script>

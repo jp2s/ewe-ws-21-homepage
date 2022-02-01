@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aufgabe 11.2: Menü-Komponente (3 Punkte)</title>
+    <style>
+        html {
+            font-family: Helvetica Neue, serif;
+            font-size: 30px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mainContentWrapper {
+            row-gap: 48px;
+            margin: 64px;
+        }
+
+        .contentWrapper {
+            flex-direction: column;
+            row-gap: 100px;
+        }
+
+        #title {
+            font-weight: bold;
+            font-size: 50px;
+            border-bottom: 8px solid hotpink;
+            padding-bottom: 4px;
+        }
+        .menuItem {
+            transition: all 0.3s;
+        }
+        .menuItem:hover {
+            cursor: pointer;
+            color: white;
+            background: teal;
+            transition: all 0.3s;
+        }
+        .variantWrapper {
+            align-items: flex-start;
+            row-gap: 16px;
+        }
+    </style>
+</head>
+<body>
+<div id="app" class="mainContentWrapper container">
+    <div id="title">{{title}}</div>
+
+    <div class="contentWrapper container">
+        <div class="variantWrapper container">
+            <div>
+                Variant: Horizontal
+            </div>
+            <my-menu :entries="[
+                'Horizontal Entry 1',
+                'Horizontal Entry 2',
+                'Horizontal Entry 3',
+                'Horizontal Entry 4',
+            ]"></my-menu>
+        </div>
+
+        <div class="variantWrapper container">
+            <div>
+                Variant: Vertical
+            </div>
+            <my-menu :entries="[
+                'Vertical Entry 1',
+                'Vertical Entry 2',
+                'Vertical Entry 3',
+                'Vertical Entry 4',
+            ]" vert="true"></my-menu>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="https://unpkg.com/vue"></script>
+<script type="module">
+    import MyMenu from "./MyMenu.mjs";
+
+    new Vue({
+        el: '#app',
+        data: {
+            title: "Aufgabe 11.2: Menü-Komponente (3 Punkte)"
+        },
+        methods: {
+        },
+        components: {
+            MyMenu
+        }
+    });
+</script>

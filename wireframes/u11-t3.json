@@ -1,0 +1,58 @@
+{
+  "HTML": {
+    "About": {
+      "desc": "HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).\n\n\"Hypertext\" refers to links that connect web pages to one another, either within a single website or between websites. Links are a fundamental aspect of the Web. By uploading content to the Internet and linking it to pages created by other people, you become an active participant in the World Wide Web.",
+      "ref": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    },
+    "Head": {
+      "desc": "The &lthead&gt HTML element contains machine-readable information (metadata) about the document, like its title, scripts, and style sheets.",
+      "ref": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head"
+    },
+    "Body": {
+      "desc": "The &ltbody&gt HTML element represents the content of an HTML document. There can be only one &ltbody&gt element in a document.",
+      "ref": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body"
+    }
+  },
+  "CSS": {
+    "About": {
+      "desc": "CSS (Cascading Style Sheets) is a declarative language that controls how webpages look in the browser.\n\nThe browser applies CSS style declarations to selected elements to display them properly. A style declaration contains the properties and their values, which determine how a webpage looks.\n\nCSS is one of the three core Web technologies, along with HTML and JavaScript. CSS usually styles HTML elements, but can be also used with other markup languages like SVG or XML. \"Cascading\" refers to the rules that govern how selectors are prioritized to change a page's appearance. This is a very important feature, since a complex website can have thousands of CSS rules.",
+      "ref": "https://developer.mozilla.org/en-US/docs/Glossary/CSS"
+    },
+    "Property": {
+      "desc": "A CSS property is a characteristic (like color) whose associated value defines one aspect of how the browser should display the element.",
+      "ref": "https://developer.mozilla.org/en-US/docs/Glossary/property/CSS"
+    },
+    "Selector": {
+      "desc": "A CSS selector is the part of a CSS rule that describes what elements in a document the rule will match. The matching elements will have the rule's specified style applied to them.",
+      "ref": "https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector"
+    }
+  },
+  "JavaScript": {
+    "About": {
+      "desc": "JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.\n\nThis section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about API specifics to Web pages, please see Web APIs and DOM.\n\nThe standards for JavaScript are the ECMAScript Language Specification (ECMA-262) and the ECMAScript Internationalization API specification (ECMA-402). The JavaScript documentation throughout MDN is based on the latest draft versions of ECMA-262 and ECMA-402. And in cases where some proposals for new ECMAScript features have already been implemented in browsers, documentation and examples in MDN articles may use some of those new features.\n\nDo not confuse JavaScript with the Java programming language. Both \"Java\" and \"JavaScript\" are trademarks or registered trademarks of Oracle in the U.S. and other countries. However, the two programming languages have very different syntax, semantics, and use.",
+      "ref": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    "Functions": {
+      "desc": "Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.",
+      "ref": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions"
+    },
+    "Operators": {
+      "desc": "An assignment operator assigns a value to its left operand based on the value of its right operand. The simple assignment operator is equal (=), which assigns the value of its right operand to its left operand. That is, x = f() is an assignment expression that assigns the value of f() to x. For more complex assignments, the destructuring assignment syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and object literals.",
+      "ref": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#operators"
+    },
+    "Object": {
+      "desc": "The Object class represents one of JavaScript's data types. It is used to store various keyed collections and more complex entities. Objects can be created using the Object() constructor or the object initializer / literal syntax. Nearly all objects in JavaScript are instances of Object; a typical object inherits properties (including methods) from Object.prototype, although these properties may be shadowed (a.k.a. overridden). However, an Object may be deliberately created for which this is not true (e.g. by Object.create(null)), or it may be altered so that this is no longer true (e.g. with Object.setPrototypeOf). Changes to the Object prototype object are seen by all objects through prototype chaining, unless the properties and methods subject to those changes are overridden further along the prototype chain. This provides a very powerful although potentially dangerous mechanism to override or extend object behavior.",
+      "ref": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+    }
+  },
+  "Other": {
+    "HTTP": {
+      "desc": "Hypertext Transfer Protocol (HTTP) is an application-layer protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes. HTTP follows a classical client-server model, with a client opening a connection to make a request, then waiting until it receives a response. HTTP is a stateless protocol, meaning that the server does not keep any data (state) between two requests.",
+      "ref": "https://developer.mozilla.org/en-US/docs/Web/HTTP"
+    },
+    "APIs": {
+      "desc": "When writing code for the Web, there are a large number of Web APIs available. Below is a list of all the APIs and interfaces (object types) that you may be able to use while developing your Web app or site.\n\nWeb APIs are typically used with JavaScript, although this doesn't always have to be the case.",
+      "ref": "https://developer.mozilla.org/en-US/docs/Web/API"
+    }
+  }
+}
