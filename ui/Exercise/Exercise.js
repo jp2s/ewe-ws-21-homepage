@@ -2,17 +2,35 @@ import {renderTableOfContents} from "../TableOfContents/TableOfContents.js";
 import {renderGoToTop} from "../GoToTop/GoToTop.js";
 import {renderStar} from "../Star/Star.js";
 
-const renderRequestReply = (requestText, replyText, classes) =>
+const renderRequestReply = (requestText, replyText, classes, enableLink = false) =>
     `
     <div class="${classes.requestClass}">${requestText}</div>
-    <div class="${classes.replyClass}">${replyText}</div>
+    <div class="${classes.replyClass}">
+        ${enableLink ?  
+        `<a 
+            class="refLink" 
+            href="${replyText}" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            style="text-decoration: none"
+        >` : ""}
+            ${replyText}
+        ${enableLink ? `</a>` : ""}
+    </div>
     `
 
 const renderTask = (data, classes, index) =>
     `
     <div class="${classes.taskWrapperClass}">
         <div id="task${index}" class="${classes.titleClass}">${data.title}</div>
-        ${data.text ? data.text.map(item => renderRequestReply(item.request, item.reply, classes)).join('') : ""}
+        ${data.text ? data.text.map(
+            item => renderRequestReply(
+                item.request, 
+                item.reply, 
+                classes,
+                item.enableLink
+            )
+        ).join('') : ""}
         ${data.wireframe ? data.wireframe : ""}
         ${data.taskPages ? data.taskPages.map(page => page).join('') : ""}
         ${data.showStar ? renderStar() : ""}
