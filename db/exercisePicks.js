@@ -1,72 +1,26 @@
+import {tocSix} from "./exerciseSix.js";
 import {baseUrl} from "../util/url.js";
+import {tocFive} from "./exerciseFive.js";
+import {tocNine} from "./exerciseNine.js";
+import {tocEight} from "./exerciseEight.js";
+import {tocEleven} from "./exerciseEleven.js";
 import {fetchCode} from "../util/code.js";
+import {renderCode} from "../ui/General/General.js";
 import {renderTaskPage} from "../ui/TaskPage/TaskPage.js";
 import {renderWireframe} from "../ui/Wireframe/Wireframe.js";
 import {modalIdGenerator} from "../util/generator.js";
 import {defaultCodeClasses, defaultWireframeClasses} from "../util/classes.js";
-import {renderCode} from "../ui/General/General.js";
 
 const modalIds = modalIdGenerator();
 
 export const tocPicks = {
     content: [
-        {
-            title: "Rednerliste mit Zeitmessung",
-            descriptions: [
-                "Stopwatch",
-                "Timer",
-                "DOM API",
-                "setInterval",
-            ]
-        },
-        {
-            title: "Klammerpaare",
-            descriptions: [
-                "Nesting Brackets",
-                "Types of Brackets: ( ), { }, [ ]",
-                "Testing with console.assert"
-            ]
-        },
-        {
-            title: "Topologische Iterierbarkeit",
-            descriptions: [
-                "Top Sort",
-                "Classes",
-                "Constructor",
-                "next()",
-                "Testing with console.assert"
-            ]
-        },
-        {
-            title: "WWW-Navigator",
-            descriptions: [
-                "Content from JSON-File",
-                "Full Website",
-                "Site for Web Topics",
-                "Menus and Submenus",
-                "Responsive Layout"
-            ]
-        },
-        {
-            title: "Interaktive SVG Grafik",
-            descriptions: [
-                "Implementing Tic Tac Toe",
-                "Game",
-                "Animations"
-            ]
-        },
-        {
-            title: "Vue.js WWW-Navigator",
-            descriptions: [
-                "Content from JSON-File",
-                "Full Website",
-                "Site for Web Topics",
-                "Menus and Submenus",
-                "Responsive Layout",
-                "Implementing with Vue.js",
-                "Single Page Application"
-            ]
-        },
+        tocNine.content[2],
+        tocEight.content[2],
+        tocEleven.content[2],
+        tocSix.content[0],
+        tocSix.content[1],
+        tocFive.content[0]
     ],
 }
 
@@ -74,54 +28,17 @@ export const exercisePicks = {
     title: "My personal picks for the best Exercise solutions",
     tasks: [
         {
-            title: "5.2. Rednerliste mit Zeitmessung (5 Punkte)",
-            text: [
-                {
-                    request: "JavaScript-Quelltext aus der separaten Datei",
-                    reply: renderCode(await fetchCode("../wireframes/u05-t2.js"), defaultCodeClasses)
-                }
-            ],
+            title: "9.3. Interaktive SVG Grafik (5 Punkte)",
             taskPages: [
                 await renderTaskPage(
                     {
-                        requestText: "Implementieren Sie die interaktive Anwendung \"Rednerliste mit Zeitmessung\" selbstständig in JavaScript durch Nutzung der DOM API und der Timer-Funktionen. Neue Redner sollen auf Knopfdruck hinzugefügt werden können. Deren Uhr wird dann sofort automatisch gestartet und alle anderen Uhren angehalten. Bei jedem Redner soll die individuelle, gemessene Redezeit sekundengenau angezeigt werden. Für jeden Redner soll es einen eigenen Start-/Stopp-Button geben. Es soll immer nur eine Uhr laufen. Angezeigt werden sollen die bisherigen Summenzeiten aller Redebeiträge der betreffenden Person. Suchen Sie eine möglichst kurze und elegante Lösung. Achten Sie gleichzeitig auf gute Usability: z.B. wenn die Eingabe mit einem Return beendet wird, soll der Button-Click nicht mehr erforderlich sein, usw.",
-                        taskPageSrc: "../wireframes/u05-t2.html"
+                        requestText: "Implementieren Sie das Spiel Tic-Tac-Toe als HTML-Datei mit Inline SVG, CSS und JavaScript. ",
+                        taskPageSrc: "../wireframes/u09-t3.html"
                     },
                     defaultWireframeClasses,
-                    modalIds.next().value
-                )
-            ]
-        },
-        {
-            title: "6.1. Klammerpaare (2 Punkte)",
-            taskPages: [
-                await renderTaskPage(
-                    {
-                        requestText: "Schreiben Sie eine Webseite, in die man eine Zeichenkette mit beliebigen Buchstaben, Zahlen und Sonderzeichen eingeben kann, die beliebig geschachtelte Klammern [...], (...) und {...} enthält, so dass sofort geprüft wird, ob alle Klammerpaare korrekt geschachtelt sind. Das Eingabefeld der Zeichenkette soll rot gefärbt werden, wenn es ein Klammerpaar gibt, das falsch geschachtelt ist.",
-                        taskPageSrc: "../wireframes/u06-t1.html"
-                    },
-                    defaultWireframeClasses,
-                    modalIds.next().value
-                )
-            ]
-        },
-        {
-            title: "6.2. Topologische Iterierbarkeit (2 Punkte)",
-            text: [
-                {
-                    request: "Geben Sie hier Ihren ECMAScript-Code inkl. Tests ein. Verwenden Sie für Ihre Tests die Funktion console.assert.",
-                    reply: renderCode(await fetchCode("../wireframes/u06-t2.js"), defaultCodeClasses)
-                }
-            ],
-            taskPages: [
-                await renderTaskPage(
-                    {
-                        requestText: "Betten Sie Ihren ECMAScript-Code in eine Webseite ein, so dass man die Vorrangrelation dort eingeben kann. Geben Sie hier die HTML-Seite an:",
-                        taskPageSrc: "../wireframes/u06-t2.html"
-                    },
-                    defaultWireframeClasses,
-                    modalIds.next().value
-                )
+                    modalIds.next().value,
+                    true
+                ),
             ]
         },
         {
@@ -138,21 +55,9 @@ export const exercisePicks = {
                     code: await fetchCode("../wireframes/u08-t3.html"),
                 },
                 defaultWireframeClasses,
-                modalIds.next().value
+                modalIds.next().value,
+                true
             )
-        },
-        {
-            title: "9.3. Interaktive SVG Grafik (5 Punkte)",
-            taskPages: [
-                await renderTaskPage(
-                    {
-                        requestText: "Implementieren Sie das Spiel Tic-Tac-Toe als HTML-Datei mit Inline SVG, CSS und JavaScript. ",
-                        taskPageSrc: "../wireframes/u09-t3.html"
-                    },
-                    defaultWireframeClasses,
-                    modalIds.next().value,
-                ),
-            ]
         },
         {
             title: "11.3: Vue.js WWW-Navigator (5 Punkte)",
@@ -196,6 +101,48 @@ export const exercisePicks = {
                     modalIds.next().value
                 )
             ]
-        }
+        },
+        {
+            title: "6.1. Klammerpaare (2 Punkte)",
+            taskPages: [
+                await renderTaskPage(
+                    {
+                        requestText: "Schreiben Sie eine Webseite, in die man eine Zeichenkette mit beliebigen Buchstaben, Zahlen und Sonderzeichen eingeben kann, die beliebig geschachtelte Klammern [...], (...) und {...} enthält, so dass sofort geprüft wird, ob alle Klammerpaare korrekt geschachtelt sind. Das Eingabefeld der Zeichenkette soll rot gefärbt werden, wenn es ein Klammerpaar gibt, das falsch geschachtelt ist.",
+                        taskPageSrc: "../wireframes/u06-t1.html"
+                    },
+                    defaultWireframeClasses,
+                    modalIds.next().value,
+                    true
+                )
+            ]
+        },
+        {
+            title: "6.2. Topologische Iterierbarkeit (2 Punkte)",
+            taskPages: [
+                await renderTaskPage(
+                    {
+                        requestText: "Betten Sie Ihren ECMAScript-Code in eine Webseite ein, so dass man die Vorrangrelation dort eingeben kann. Geben Sie hier die HTML-Seite an:",
+                        taskPageSrc: "../wireframes/u06-t2.html"
+                    },
+                    defaultWireframeClasses,
+                    modalIds.next().value,
+                    true
+                )
+            ]
+        },
+        {
+            title: "5.2. Rednerliste mit Zeitmessung (5 Punkte)",
+            taskPages: [
+                await renderTaskPage(
+                    {
+                        requestText: "Implementieren Sie die interaktive Anwendung \"Rednerliste mit Zeitmessung\" selbstständig in JavaScript durch Nutzung der DOM API und der Timer-Funktionen. Neue Redner sollen auf Knopfdruck hinzugefügt werden können. Deren Uhr wird dann sofort automatisch gestartet und alle anderen Uhren angehalten. Bei jedem Redner soll die individuelle, gemessene Redezeit sekundengenau angezeigt werden. Für jeden Redner soll es einen eigenen Start-/Stopp-Button geben. Es soll immer nur eine Uhr laufen. Angezeigt werden sollen die bisherigen Summenzeiten aller Redebeiträge der betreffenden Person. Suchen Sie eine möglichst kurze und elegante Lösung. Achten Sie gleichzeitig auf gute Usability: z.B. wenn die Eingabe mit einem Return beendet wird, soll der Button-Click nicht mehr erforderlich sein, usw.",
+                        taskPageSrc: "../wireframes/u05-t2.html"
+                    },
+                    defaultWireframeClasses,
+                    modalIds.next().value,
+                    true
+                )
+            ]
+        },
     ]
 }
