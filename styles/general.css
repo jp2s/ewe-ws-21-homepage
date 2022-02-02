@@ -58,10 +58,10 @@ body {
     cursor: pointer;
     transition-duration: 0.3s;
 }
-#picks:hover {
+#picksNavBarItem:hover {
     color: gold;
 }
-#imprint:hover {
+#imprintNavBarItem:hover {
     color: dodgerblue;
 }
 /*---------- welcome ----------*/
