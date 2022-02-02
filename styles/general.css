@@ -61,6 +61,9 @@ body {
 #picks:hover {
     color: gold;
 }
+#imprint:hover {
+    color: dodgerblue;
+}
 /*---------- welcome ----------*/
 #welcomeDots {
     margin-top: 50px;

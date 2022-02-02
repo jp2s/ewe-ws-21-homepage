@@ -69,9 +69,11 @@
 }
 .defaultWireframePageRefClass {
     border: 4px solid gold;
+    padding: 28px;
 }
 .defaultWireframePageRefClass:hover {
     border: 4px solid gold;
+    padding: 28px;
     background: rgba(255,215,0,0.8);
     transition: all 0.3s;
 }
@@ -92,6 +94,11 @@
     color: silver;
 }
 .defaultCodeWrapperClass {
+    background: linen;
+    border: 16px ridge silver;
+    border-radius: 0px;
+}
+.defaultWireframePagePreviewWrapperClass {
     background: linen;
     border: 16px ridge silver;
     border-radius: 0px;
