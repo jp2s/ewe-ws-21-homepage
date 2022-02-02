@@ -15,7 +15,7 @@ export const tocFour = {
             ]
         },
         {
-            title: "Objects",
+            title: "Objekte",
             descriptions: [
                 "JavaScript",
                 "Objects",
