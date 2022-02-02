@@ -21,6 +21,7 @@ const renderHeader = () =>
         <div class="navBarItem" onclick="${goToPage('twelve')}">twelve</div>
         <div class="navBarItem" onclick="${goToPage('thirteen')}">thirteen</div>
         <div id="picks" class="navBarItem" onclick="${goToPage('picks')}">picks</div>
+        <div id="imprint" class="navBarItem" onclick="${goToPage('imprint')}">imprint</div>
     </div>
     <hr align="left" id="headerDivider">
     `
