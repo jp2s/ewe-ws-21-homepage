@@ -1,5 +1,6 @@
 import {renderTableOfContents} from "../TableOfContents/TableOfContents.js";
 import {renderGoToTop} from "../GoToTop/GoToTop.js";
+import {renderStar} from "../Star/Star.js";
 
 const renderRequestReply = (requestText, replyText, classes) =>
     `
@@ -14,13 +15,14 @@ const renderTask = (data, classes, index) =>
         ${data.text ? data.text.map(item => renderRequestReply(item.request, item.reply, classes)).join('') : ""}
         ${data.wireframe ? data.wireframe : ""}
         ${data.taskPages ? data.taskPages.map(page => page).join('') : ""}
+        ${data.showStar ? renderStar() : ""}
     </div>
     `
 
 const renderExercise = (data, classes, tocData) =>
     `
         <div class="${classes.exerciseWrapperClass}">
-            <div class="${classes.exerciseClass}">${data.title}</div>
+            <div class="${classes.exerciseClass}">${data.title}${data.showStar ? renderStar() : ""}</div>
             ${renderTableOfContents(tocData, classes)}
             ${data.tasks.map((task, index) => renderTask(task, classes, index)).join('')}
         </div>
