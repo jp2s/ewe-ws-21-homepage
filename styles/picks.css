@@ -1,5 +1,28 @@
 /*Override defaults*/
 
+.defaultExerciseTitle {
+    position: relative;
+}
+.star {
+    scale: 1.5;
+    animation: 4s ease 0s infinite normal none running starAnim;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+}
+@keyframes starAnim {
+    0% {
+        rotate: 0deg;
+        fill: white
+    }
+    50% {
+        fill: gold;
+    }
+    100% {
+        rotate: 360deg;
+        fill: white;
+    }
+}
 .defaultExerciseWrapperClass {
     row-gap: 48px;
 }
@@ -19,6 +42,7 @@
     text-shadow: 1px 1px 4px goldenrod;
 }
 .defaultTaskWrapperClass {
+    position: relative;
     background: papayawhip;
     border: 16px ridge gold;
     border-radius: 0px;

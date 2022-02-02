@@ -25,9 +25,11 @@ export const tocPicks = {
 }
 
 export const exercisePicks = {
+    showStar: true,
     title: "My personal picks for the best Exercise solutions",
     tasks: [
         {
+            showStar: true,
             title: "9.3. Interaktive SVG Grafik (5 Punkte)",
             taskPages: [
                 await renderTaskPage(
@@ -39,9 +41,10 @@ export const exercisePicks = {
                     modalIds.next().value,
                     true
                 ),
-            ]
+            ],
         },
         {
+            showStar: true,
             title: "8.3. WWW-Navigator (4 Punkte)",
             wireframe: renderWireframe(
                 {
@@ -60,6 +63,7 @@ export const exercisePicks = {
             )
         },
         {
+            showStar: true,
             title: "11.3: Vue.js WWW-Navigator (5 Punkte)",
             text: [
                 {
@@ -103,6 +107,7 @@ export const exercisePicks = {
             ]
         },
         {
+            showStar: true,
             title: "6.1. Klammerpaare (2 Punkte)",
             taskPages: [
                 await renderTaskPage(
@@ -117,6 +122,7 @@ export const exercisePicks = {
             ]
         },
         {
+            showStar: true,
             title: "6.2. Topologische Iterierbarkeit (2 Punkte)",
             taskPages: [
                 await renderTaskPage(
@@ -128,9 +134,10 @@ export const exercisePicks = {
                     modalIds.next().value,
                     true
                 )
-            ]
+            ],
         },
         {
+            showStar: true,
             title: "5.2. Rednerliste mit Zeitmessung (5 Punkte)",
             taskPages: [
                 await renderTaskPage(
