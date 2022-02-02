@@ -18,12 +18,12 @@ const renderImagePreview = (imgSrc, classes, modalId) =>
     </div>
     `
 
-export const renderWireframe = (data, classes, modalId) =>
+export const renderWireframe = (data, classes, modalId, hideCode = false) =>
     `
     <div class=${classes.wireframeWrapperClass}>
         ${renderRequest(data.requestText, classes)}
         ${renderImagePreview(data.imgSrc, classes, modalId)}
         ${renderPagePreview(data.wireframePageSrc, classes, modalId)}
-        ${renderCode(data.code, classes)}
+        ${hideCode ? "" : renderCode(data.code, classes)}
     </div>
     `
