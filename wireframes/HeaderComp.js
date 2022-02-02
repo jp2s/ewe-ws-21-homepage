@@ -1,4 +1,4 @@
-import MenuEntryComp from "./MenuEntryComp.mjs";
+import MenuEntryComp from "./MenuEntryComp.js";
 
 export default {
     template:

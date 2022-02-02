@@ -50,7 +50,7 @@ export const exerciseEleven = {
                     request: "Schreiben Sie eine Vue.js Single File Component mit einem Text-Eingabefeld und 3 Ausgabefeldern, in denen man während des Tippens sehen kann, (a) wie viele Buchstaben (b) wie viele Leerzeichen und (c) wie viele Worte man in das Text-Eingabefeld bereits eingegeben hat.\n" +
                         "<br><br>" +
                         "Betten Sie Ihre Komponente in eine Webseite zweimal ein und testen Sie, ob beide Komponenten unabhängig voneinander sind.",
-                    reply: renderCode(await fetchCode("../wireframes/TextAnalyzer.mjs"), defaultCodeClasses),
+                    reply: renderCode(await fetchCode("../wireframes/TextAnalyzer.js"), defaultCodeClasses),
                 }
             ],
             taskPages: [
@@ -71,7 +71,7 @@ export const exerciseEleven = {
                     request: "Schreiben Sie eine möglichst flexible Vue.js Single File Component für Menüs und wenden Sie diese in derselben Webseite zweimal an, einmal horizontal, das andere Mal vertikal." +
                         "<br><br>" +
                         "Component File:",
-                    reply: renderCode(await fetchCode("../wireframes/MyMenu.mjs"), defaultCodeClasses),
+                    reply: renderCode(await fetchCode("../wireframes/MyMenu.js"), defaultCodeClasses),
                 }
             ],
             taskPages: [
@@ -97,24 +97,24 @@ export const exerciseEleven = {
                         "Das State Management besteht aus einer Setter-Methode in der Parent-Komponente und einer Event-Handler Property in der Child-Komponente, die diese Methode dann aufruft. Somit kann beim Klicken auf einen Menüeintrag der State vom Menu-Index geändert werden. Die einzelnen Seiten werden dann mittels Conditional-Rendering auf Basis von diesem Index angezeigt.",
                 },
                 {
-                    request: "ContentComp.mjs:",
-                    reply: renderCode(await fetchCode("../wireframes/ContentComp.mjs"), defaultCodeClasses)
+                    request: "ContentComp.js:",
+                    reply: renderCode(await fetchCode("../wireframes/ContentComp.js"), defaultCodeClasses)
                 },
                 {
-                    request: "ContentFrameComp.mjs:",
-                    reply: renderCode(await fetchCode("../wireframes/ContentFrameComp.mjs"), defaultCodeClasses)
+                    request: "ContentFrameComp.js:",
+                    reply: renderCode(await fetchCode("../wireframes/ContentFrameComp.js"), defaultCodeClasses)
                 },
                 {
-                    request: "ContentMenu.mjs:",
-                    reply: renderCode(await fetchCode("../wireframes/ContentMenu.mjs"), defaultCodeClasses)
+                    request: "ContentMenu.js:",
+                    reply: renderCode(await fetchCode("../wireframes/ContentMenu.js"), defaultCodeClasses)
                 },
                 {
-                    request: "HeaderComp.mjs:",
-                    reply: renderCode(await fetchCode("../wireframes/HeaderComp.mjs"), defaultCodeClasses)
+                    request: "HeaderComp.js:",
+                    reply: renderCode(await fetchCode("../wireframes/HeaderComp.js"), defaultCodeClasses)
                 },
                 {
-                    request: "MenuEntryComp.mjs:",
-                    reply: renderCode(await fetchCode("../wireframes/MenuEntryComp.mjs"), defaultCodeClasses)
+                    request: "MenuEntryComp.js:",
+                    reply: renderCode(await fetchCode("../wireframes/MenuEntryComp.js"), defaultCodeClasses)
                 },
             ],
             taskPages: [

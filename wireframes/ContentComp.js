@@ -1,5 +1,5 @@
-import ContentMenu from "./ContentMenu.mjs";
-import ContentFrameComp from "./ContentFrameComp.mjs";
+import ContentMenu from "./ContentMenu.js";
+import ContentFrameComp from "./ContentFrameComp.js";
 
 export default {
     template:

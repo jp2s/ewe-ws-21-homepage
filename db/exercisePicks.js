@@ -75,24 +75,24 @@ export const exercisePicks = {
                         "Das State Management besteht aus einer Setter-Methode in der Parent-Komponente und einer Event-Handler Property in der Child-Komponente, die diese Methode dann aufruft. Somit kann beim Klicken auf einen Menüeintrag der State vom Menu-Index geändert werden. Die einzelnen Seiten werden dann mittels Conditional-Rendering auf Basis von diesem Index angezeigt.",
                 },
                 {
-                    request: "ContentComp.mjs:",
-                    reply: renderCode(await fetchCode("../wireframes/ContentComp.mjs"), defaultCodeClasses)
+                    request: "ContentComp.js:",
+                    reply: renderCode(await fetchCode("../wireframes/ContentComp.js"), defaultCodeClasses)
                 },
                 {
-                    request: "ContentFrameComp.mjs:",
-                    reply: renderCode(await fetchCode("../wireframes/ContentFrameComp.mjs"), defaultCodeClasses)
+                    request: "ContentFrameComp.js:",
+                    reply: renderCode(await fetchCode("../wireframes/ContentFrameComp.js"), defaultCodeClasses)
                 },
                 {
-                    request: "ContentMenu.mjs:",
-                    reply: renderCode(await fetchCode("../wireframes/ContentMenu.mjs"), defaultCodeClasses)
+                    request: "ContentMenu.js:",
+                    reply: renderCode(await fetchCode("../wireframes/ContentMenu.js"), defaultCodeClasses)
                 },
                 {
-                    request: "HeaderComp.mjs:",
-                    reply: renderCode(await fetchCode("../wireframes/HeaderComp.mjs"), defaultCodeClasses)
+                    request: "HeaderComp.js:",
+                    reply: renderCode(await fetchCode("../wireframes/HeaderComp.js"), defaultCodeClasses)
                 },
                 {
-                    request: "MenuEntryComp.mjs:",
-                    reply: renderCode(await fetchCode("../wireframes/MenuEntryComp.mjs"), defaultCodeClasses)
+                    request: "MenuEntryComp.js:",
+                    reply: renderCode(await fetchCode("../wireframes/MenuEntryComp.js"), defaultCodeClasses)
                 },
             ],
             taskPages: [
